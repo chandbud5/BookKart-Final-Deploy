@@ -64,3 +64,8 @@ def authenticate(request):
 
 	else:
 		return redirect('/login/')
+
+def logout(request):
+	auth.logout(request)
+	print("logout Successful")
+	return redirect('/')
