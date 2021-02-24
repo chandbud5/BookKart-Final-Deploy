@@ -583,41 +583,33 @@
 								<div class="table-responsive">
 
 
-								<form action="/action_page.php">
+								<form action="/add_product/">
 									<h3>Enter Your Product Details</h3>
-								  <label for="fname">Book name:</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-								  <label for="fname">Book description:</label>
-									<textarea id="w3review" name="w3review" rows="4" cols="50">
+								  <label for="bname">Book name:</label>
+								  <input type="text" id="bname" name="bname"><br><br>
+								  <label for="bdesc">Book description:</label>
+									<textarea id="book-desc" name="bdesc" rows="4" cols="50">
 									</textarea>
-									<label for="fname">Author name:</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-									<label for="fname">Select catagory</label>
-									<select name = "dropdown">
-            			<option value = "Engineering" selected>Engineering</option>
-            			<option value = "Medical">Medical</option>
-            			<option value = "Law">Law</option>
-									<option value = "Civil services">Civil services</option>
-									<option value = "Novel">Novels</option>
+									<label for="aname">Author name:</label>
+								  <input type="text" id="aname" name="aname"><br><br>
+									<label for="catagory">Select catagory</label>
+									<select name = "category">
+				            			<option value = "Engineering" selected>Engineering</option>
+				            			<option value = "Medical">Medical</option>
+				            			<option value = "Law">Law</option>
+										<option value = "Civil services">Civil services</option>
+										<option value = "Novel">Novels</option>
 									</select><br></br>
-									<label for="fname">Price :</label>
-								  <input type="text" id="fname" name="fname"><br><br>
+									<label for="price">Price :</label>
+								  <input type="text" id="price" name="price"><br><br>
 									<label for="fname">Select Your Product:</label>
-									<select name = "dropdown">
-            			<option value = "Book" selected>Book</option>
-            			<option value = "Stationary Item">Stationary Item</option>
-
+									<select name = "category">
+				            			<option value = "Book" selected>Book</option>
+			    	        			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br>
-
 									<p>Upload Your Product Photos</p>
-									<input type="file" id="myFile" name="filename">
-
-
-
-
+									<input type="file" id="myFile" name="file">
 								</form>
-
-
 							</div>
 								<!-- <div class="table-responsive">
 									<table class="table table-sm table-borderless mb-0">
@@ -642,10 +634,8 @@
 
 								</div>
 								<button type="button" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light">Submit</button>
-
 							</div>
 						</div>
-
 					</section>
 					<!--Section: Block Content-->
 
