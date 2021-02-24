@@ -36,7 +36,7 @@ def signup(request):
 				user = User.objects.create_user(username=uname, password=pwd, email=e_mail, 
 					first_name=fname, last_name=lname)
 				user.save()
-				messages.info("Registration Successful please login")
+				messages.info(request, "Registration Successful please login")
 				return redirect('/login/')
 			else:
 				bool_incorrect = True
