@@ -578,19 +578,16 @@
 								<div class="table-responsive">
 
 
-								<form action="/add_product/">
-									<h3>Enter Your Product Details</h3>
-								  <label for="bname">Book name:</label>
-								  <input type="text" id="bname" name="bname"><br><br>
-								  <label for="bdesc">Book description:</label>
-									<textarea id="book-desc" name="bdesc" rows="4" cols="50">
-								  <label for="fname">Book name:</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-								  <label for="fname">Book description:</label>
-									<textarea id="w3review" name="w3review" rows="4" cols="20">
+								<form method="POST" action="/add_product/" enctype="multipart/form-data">
+									{% csrf_token %}
+								  	<h3>Enter Your Product Details</h3>
+								  	<label for="bname">Book name:</label>
+								  	<input type="text" id="bname" name="bname" required><br><br>
+								  	<label for="bdesc">Book description:</label>
+									<textarea id="book-desc" name="bdesc" rows="4" cols="25" required>
 									</textarea>
 									<label for="aname">Author name:</label>
-								  <input type="text" id="aname" name="aname"><br><br>
+								  <input type="text" id="aname" name="aname" required><br><br>
 									<label for="catagory">Select catagory</label>
 									<select name = "category">
 				            			<option value = "Engineering" selected>Engineering</option>
@@ -600,23 +597,18 @@
 										<option value = "Novel">Novels</option>
 									</select><br></br>
 									<label for="price">Price :</label>
-								  <input type="text" id="price" name="price"><br><br>
-									<label for="fname">Select Your Product:</label>
-									<select name = "category">
-				            			<option value = "Book" selected>Book</option>
-			    	        			<option value = "Stationary Item">Stationary Item</option>
-									</select><br></br>
-									<select name = "dropdown">
+								  <input type="Number" id="price" name="price" required><br><br>
+									<select name = "item">
 			    	        			<option value = "Book" selected>Book</option>
 				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br>
-									<label for="fname">Enter Mobile Number</label>
-									<input type="text" id="fname" name="fname"><br><br>
-									<label for="fname">Enter Email id:</label>
-									<input type="text" id="fname" name="fname"><br><br>
-
+									<label for="phone">Enter Mobile Number</label>
+									<input type="Number" id="phone" name="phone" required><br><br>
+									<label for="email">Enter Email id:</label>
+									<input type="email" id="email" name="email" required><br><br>
 									<p>Upload Your Product Photos</p>
-									<input type="file" id="myFile" name="file">
+									<input type="file" id="myFile" name="productimg" required>
+									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
 							</div>
 								<!-- <div class="table-responsive">
@@ -638,10 +630,6 @@
 									</table>
 								</div> -->
 								<hr>
-								<div class="table-responsive mb-2">
-
-								</div>
-								<button type="button" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light">Submit</button>
 							</div>
 						</div>
 					</section>

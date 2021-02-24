@@ -11,8 +11,8 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
-def product(request):
-	return render(request, 'add_product.html')
+def prod(request):
+	return render(request, 'product.html')
 
 def login(request):
 	return render(request, 'login.html')
@@ -69,3 +69,47 @@ def logout(request):
 	auth.logout(request)
 	print("logout Successful")
 	return redirect('/')
+
+def sell(request):
+	return render(request, 'add_product.html')
+
+def add_product(request):
+	if request.method == 'POST':
+		bname = request.POST.get('bname')
+		bdesc = request.POST.get('bdesc')
+		aname = request.POST.get('aname')
+		category = request.POST.get('category')
+		price = request.POST.get('price')
+		phone = request.POST.get('phone')
+		item = request.POST.get('item')
+		e_mail = request.POST.get('email')
+		image = request.FILES['productimg']
+
+		if item == "Stationary Item":
+			prod = product.objects.create()
+			prod.Product_Name = bname
+			prod.Product_Description = bdesc
+			prod.Price = price
+			prod.Seller_Name = request.user.first_name + " " + request.user.last_name
+			prod.Seller_Email = e_mail
+			prod.Seller_Phone = phone
+			prod.image = image
+			prod.save()
+			return render(request, 'index.html')
+
+		else:
+			b = book.objects.create()
+			b.Book_Name = bname
+			b.Book_Description = bdesc
+			b.Author = aname
+			b.Category = category
+			b.Price = price
+			b.Seller_Name = request.user.first_name + " " + request.user.last_name
+			b.Seller_Email = e_mail
+			b.Seller_Phone = phone
+			b.image = image
+			b.save()
+			return render(request, 'index.html')
+
+	else:
+		return redirect('/sell/')
