@@ -570,9 +570,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="section_subtitle">simply amazing places</div>
+					<div class="section_subtitle">simply amazing Books</div>
 					<div class="section_title">
-						<h2>Popular Destinations</h2>
+						<h2>Recently Added Books</h2>
 					</div>
 				</div>
 			</div>
@@ -581,175 +581,86 @@
 					<div class="destinations_container item_grid">
 
 						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
-								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Bali</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
+						{% for b in books %}
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{b.image.url}}" style="width: 150px;" alt="Book Image">
+									<!-- <div class="spec_offer text-center"><a href="#">Special Offer</a></div> -->
 								</div>
-								<div class="destination_price">From $679</div>
-								<style>
-									.button {
-										background-color: #008CBA;
-										border: 3px solid black;
-										border-radius: 10px;
-										color: white;
-										padding: 7px 7px;
-										text-align: center;
-										text-decoration: none;
-										display: inline-block;
-										font-size: 16px;
-										margin: 4px 2px;
-										cursor: pointer;
-									}
-								</style>
-								<a href="#" class="button">Buy Now</a>
-								<button class="button">Book description</button>
+								<div class="destination_content">
+									<div class="destination_title"><a href="/prod/">{{b.Book_Name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{ b.Author }}</p>
+									</div>
+									<div class="destination_price">{{ b.Price }}</div>
+									<style>
+										.button {
+											background-color: #008CBA;
+											border: 3px solid black;
+											border-radius: 10px;
+											color: white;
+											padding: 7px 7px;
+											text-align: center;
+											text-decoration: none;
+											display: inline-block;
+											font-size: 16px;
+											margin: 4px 2px;
+											cursor: pointer;
+										}
+									</style>
+									<a href="#" class="button">Buy Now</a>
+									<button class="button">Book description</button>
+								</div>
 							</div>
-						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">Simply amazing Products</div>
+					<div class="section_title">
+						<h2>Recently Added Products</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
 
 						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_2.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Indonesia</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
+						{% for b in products %}
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{b.image.url}}" style="width: 150px;" alt="Product Image">
+									<!-- <div class="spec_offer text-center"><a href="#">Special Offer</a></div> -->
 								</div>
-								<div class="destination_price">From $679</div>
-								<style>
-									.button {
-										background-color: #008CBA;
-										border: 3px solid black;
-										border-radius: 10px;
-										color: white;
-										padding: 7px 7px;
-										text-align: center;
-										text-decoration: none;
-										display: inline-block;
-										font-size: 16px;
-										margin: 4px 2px;
-										cursor: pointer;
-									}
-								</style>
-								<a href="#" class="button">Buy Now</a>
-								<button class="button">Book description</button>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_3.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">San Francisco</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
+								<div class="destination_content">
+									<div class="destination_title"><a href="/prod/">{{b.Product_Name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{ b.Author }}</p>
+									</div>
+									<div class="destination_price">{{ b.Price }}</div>
+									<style>
+										.button {
+											background-color: #008CBA;
+											border: 3px solid black;
+											border-radius: 10px;
+											color: white;
+											padding: 7px 7px;
+											text-align: center;
+											text-decoration: none;
+											display: inline-block;
+											font-size: 16px;
+											margin: 4px 2px;
+											cursor: pointer;
+										}
+									</style>
+									<a href="#" class="button">Buy Now</a>
+									<button class="button">Book description</button>
 								</div>
-								<div class="destination_price">From $679</div>
-								<style>
-									.button {
-										background-color: #008CBA;
-										border: 3px solid black;
-										border-radius: 10px;
-										color: white;
-										padding: 7px 7px;
-										text-align: center;
-										text-decoration: none;
-										display: inline-block;
-										font-size: 16px;
-										margin: 4px 2px;
-										cursor: pointer;
-									}
-								</style>
-								<a href="#" class="button">Buy Now</a>
-								<button class="button">Book description</button>
 							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_4.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Paris</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
-								</div>
-								<div class="destination_price">From $679</div>
-								<style>
-									.button {
-										background-color: #008CBA;
-										border: 3px solid black;
-										border-radius: 10px;
-										color: white;
-										padding: 7px 7px;
-										text-align: center;
-										text-decoration: none;
-										display: inline-block;
-										font-size: 16px;
-										margin: 4px 2px;
-										cursor: pointer;
-									}
-								</style>
-								<a href="#" class="button">Buy Now</a>
-								<button class="button">Book description</button>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_5.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Phi Phi Island</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
-								</div>
-								<div class="destination_price">From $679</div>
-								<style>
-									.button {
-										background-color: #008CBA;
-										border: 3px solid black;
-										border-radius: 10px;
-										color: white;
-										padding: 7px 7px;
-										text-align: center;
-										text-decoration: none;
-										display: inline-block;
-										font-size: 16px;
-										margin: 4px 2px;
-										cursor: pointer;
-									}
-								</style>
-								<a href="#" class="button">Buy Now</a>
-								<button class="button">Book description</button>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_6.jpg' %}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">Mykonos</a></div>
-								<div class="destination_subtitle">
-									<p>Nulla pretium tincidunt felis, nec.</p>
-								</div>
-								<div class="destination_price">From $679</div>
-							</div>
-						</div>
-
+						{% endfor %}
 					</div>
 				</div>
 			</div>

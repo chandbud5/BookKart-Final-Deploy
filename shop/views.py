@@ -6,7 +6,11 @@ from .models import product, book
 # Create your views here.
 
 def home(request):
-	return render(request, 'index.html')
+	b = book.objects.all().order_by('-id')[:3]
+	prod = product.objects.all().order_by('-id')[:3]
+	print(b)
+	print(type(b))
+	return render(request, 'index.html', {'books':b, 'products': prod})
 
 def about(request):
     return render(request, 'about.html')
@@ -95,8 +99,7 @@ def add_product(request):
 			prod.Seller_Phone = phone
 			prod.image = image
 			prod.save()
-			return render(request, 'index.html')
-
+			return redirect('/')
 		else:
 			b = book.objects.create()
 			b.Book_Name = bname
@@ -109,7 +112,6 @@ def add_product(request):
 			b.Seller_Phone = phone
 			b.image = image
 			b.save()
-			return render(request, 'index.html')
-
+			return redirect('/')
 	else:
 		return redirect('/sell/')
