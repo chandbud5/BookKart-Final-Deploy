@@ -3,7 +3,18 @@
 <html class="no-js" lang="en-US">
 
 <head>
-    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Travello template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon.ico' %}">
@@ -12,7 +23,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About me</title>
+    <title>Book-Kart | Home</title>
     <link rel="stylesheet" href="{% static 'assets/10004656050d5e32fb37f87e704beba6.css' %}" data-minify="1">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="https://themebubble.com/demo/webify/architect/">
@@ -38,29 +49,29 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/">
     <link rel="dns-prefetch" href="https://webify-13e95.kxcdn.com/">
-    <link rel="alternate" type="application/rss+xml" title="Architect » Feed"
-        href="https://themebubble.com/demo/webify/architect/feed/">
-    <link rel="alternate" type="application/rss+xml" title="Architect » Comments Feed"
-        href="https://themebubble.com/demo/webify/architect/comments/feed/">
-    <style type="text/css">
-        img.wp-smiley,
-        img.emoji {
-            display: inline !important;
-            border: none !important;
-            box-shadow: none !important;
-            height: 1em !important;
-            width: 1em !important;
-            margin: 0 .07em !important;
-            vertical-align: -0.1em !important;
-            background: none !important;
-            padding: 0 !important
-        }
-    </style>
+    <!-- <link rel="alternate" type="application/rss+xml" title="Architect » Feed"
+            href="https://themebubble.com/demo/webify/architect/feed/">
+        <link rel="alternate" type="application/rss+xml" title="Architect » Comments Feed"
+            href="https://themebubble.com/demo/webify/architect/comments/feed/">
+        <style type="text/css"> -->
+    <!-- img.wp-smiley,
+            img.emoji {
+                display: inline !important;
+                border: none !important;
+                box-shadow: none !important;
+                height: 1em !important;
+                width: 1em !important;
+                margin: 0 .07em !important;
+                vertical-align: -0.1em !important;
+                background: none !important;
+                padding: 0 !important
+            } -->
+    <!-- </style> -->
     <link rel="stylesheet" id="webify-fonts-css" href="{% static 'assets/css' %}" type="text/css" media="all">
     <link rel="stylesheet" id="webify-font-awesome-css" href="{% static 'assets/all.min.css' %}" type="text/css"
         media="all">
-    <link rel="stylesheet" id="webify-font-awesome-v4-css" href="{% static 'assets/v4-shims.min.css' %}"
-        type="text/css" media="all">
+    <link rel="stylesheet" id="webify-font-awesome-v4-css" href="{% static 'assets/v4-shims.min.css' %}" type="text/css"
+        media="all">
     <link rel="stylesheet" id="material-icon-css" href="{% static 'assets/icon' %}" type="text/css" media="all">
     <style id="webify-style-inline-css" type="text/css">
         .tb-error-page {
@@ -71,8 +82,7 @@
             background-image: url(https://webify-13e95.kxcdn.com/demo/webify/architect/wp-content/themes/webify/assets/img/page-header-bg.png)
         }
     </style>
-    <script type="text/javascript" src="{% static 'assets/jquery-1.12.4-wp.js.download' %}"
-        id="jquery-core-js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4-wp.js.download' %}" id="jquery-core-js"></script>
     <link rel="https://api.w.org/" href="https://themebubble.com/demo/webify/architect/wp-json/">
     <link rel="alternate" type="application/json"
         href="https://themebubble.com/demo/webify/architect/wp-json/wp/v2/pages/5">
@@ -124,162 +134,439 @@
     class="home page-template-default page page-id-5 wp-embed-responsive elementor-default elementor-kit-646 elementor-page elementor-page-5"
     data-elementor-device-mode="desktop" data-new-gr-c-s-check-loaded="14.996.0" data-gr-ext-installed="">
     <div class="tb-preloader" style="display: none;">
-        <div class="tb-preloader-in" style="display: none;"><img src="{% static 'img/logo3.PNG' %}"
-                alt="loader-logo"></div>
+        <div class="tb-preloader-in" style="display: none;"><img src="{% static 'img/logo3.PNG' %}" alt="loader-logo">
+        </div>
     </div>
     <!-- <div class="tb-solid-header-height" style="height: 0px;"></div> -->
-    <header
-        class="tb-site-header tb-default-width tb-style1 tb-sticky-header tb-solid-header tb-color1 tb-header-border1">
-        <div class="tb-main-header">
+    <!-- <header
+            class="tb-site-header tb-default-width tb-style1 tb-sticky-header tb-solid-header tb-color1 tb-header-border1">
+            <div class="tb-main-header">
+                <div class="container">
+                    <div class="tb-main-header-in">
+                        <div class="tb-main-header-left">
+                            <div class="tb-site-branding"> <a href="https://themebubble.com/demo/webify/architect/"
+                                    class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
+                                        class="tb-custom-logo"></a></div>
+                            <style>
+                                .tb-custom-logo {
+                                    max-height: 136px;
+                                }
+    
+                                .tb-custom-logo-link img {
+                                    border: 0;
+                                    max-width: 100%;
+                                    height: 70px;
+                                    max-height: 100%;
+                                }
+                            </style>
+                        </div>
+                        <div class="tb-main-header-right">
+                            <div class="tb-m-menu-btn"><span></span></div>
+                            <nav class="tb-main-nav tb-primary-nav">
+                                <ul id="nav" class="tb-primary-nav-list">
+                                    <li id="menu-item-566"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-566">
+                                        <a href="https://themebubble.com/demo/webify/architect/">Home</a>
+                                    </li>
+                                    <li id="menu-item-523"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-523 tb-mega-menu">
+                                        <a href="https://themebubble.com/demo/webify/architect/#">Mega Menu</a>
+                                        <ul class="tb-mega-wrapper"
+                                            style="background-image:url({% static 'img/books7.jpg' %});  background-size: 300px;">
+                                            <li id="menu-item-524"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-524">
+                                                <a class="tb-font-name">Engineering Books</a>
+                                                <ul class="tb-mega-menu-list">
+                                                    <li id="menu-item-525"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-525">
+                                                        <a href="https://themebubble.com/demo/webify/">CSE</a>
+                                                    </li>
+                                                    <li id="menu-item-526"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-526">
+                                                        <a href="https://themebubble.com/demo/webify/architect/">Civil</a>
+                                                    </li>
+                                                    <li id="menu-item-527"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-527">
+                                                        <a
+                                                            href="https://themebubble.com/demo/webify/consult/">Mechanical</a>
+                                                    </li>
+                                                    <li id="menu-item-528"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-528">
+                                                        <a
+                                                            href="https://themebubble.com/demo/webify/crypto/">Architecture</a>
+                                                    </li>
+                                                </ul><i class="tb-plus tb-dropdown"></i>
+                                            </li>
+                                            <li id="menu-item-529"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-529">
+                                                <a class="tb-font-name">Biology</a>
+                                                <ul class="tb-mega-menu-list">
+                                                    <li id="menu-item-530"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-530">
+                                                        <a
+                                                            href="https://themebubble.com/demo/webify/marketing/">Pharmacy</a>
+                                                    </li>
+                                                    <li id="menu-item-531"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-531">
+                                                        <a href="https://themebubble.com/demo/webify/Yoga/">MBBS</a>
+                                                    </li>
+                                                    <li id="menu-item-532"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-532">
+                                                        <a href="https://themebubble.com/demo/webify/medical/">Ayurveda</a>
+                                                    </li>
+                                                    <li id="menu-item-533"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533">
+                                                        <a href="https://themebubble.com/demo/webify/app-landing/">Homiopathic
+                                                        </a>
+                                                    </li>
+                                                </ul><i class="tb-plus tb-dropdown"></i>
+                                            </li>
+                                            <li id="menu-item-534"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-534">
+                                                <a class="tb-font-name">Stationary</a>
+                                                <ul class="tb-mega-menu-list">
+                                                    <li id="menu-item-535"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-535">
+                                                        <a href="https://themebubble.com/demo/webify/creative/">Bag</a>
+                                                    </li>
+                                                    <li id="menu-item-536"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-536">
+                                                        <a
+                                                            href="https://themebubble.com/demo/webify/photography/">Container</a>
+                                                    </li>
+                                                    <li id="menu-item-537"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537">
+                                                        <a href="https://themebubble.com/demo/webify/portfolio-masonry/">Scale
+                                                        </a>
+                                                    </li>
+                                                    <li id="menu-item-538"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-538">
+                                                        <a href="https://themebubble.com/demo/webify/restaurant/">Others</a>
+                                                    </li>
+                                                </ul><i class="tb-plus tb-dropdown"></i>
+                                            </li>
+                                            <li id="menu-item-539"
+                                                class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-539">
+                                                <a class="tb-font-name">Other</a>
+                                                <ul class="tb-mega-menu-list">
+                                                    <li id="menu-item-540"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-540">
+                                                        <a href="https://themebubble.com/demo/webify/portfolio-section/">Novels
+                                                        </a>
+                                                    </li>
+                                                    <li id="menu-item-541"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
+                                                        <a href="https://themebubble.com/demo/webify/resume/">Magazine</a>
+                                                    </li>
+                                                    <li id="menu-item-541"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
+                                                        <a href="https://themebubble.com/demo/webify/resume/">Comic book</a>
+                                                    </li>
+                                                    <li id="menu-item-541"
+                                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
+                                                        <a href="https://themebubble.com/demo/webify/resume/">History
+                                                            book</a>
+                                                    </li>
+                                                </ul><i class="tb-plus tb-dropdown"></i>
+                                            </li>
+                                        </ul><i class="tb-plus tb-dropdown"></i>
+                                    </li>
+                                    <li id="menu-item-558"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-558"><a
+                                            href="https://themebubble.com/demo/webify/architect/about/">About</a></li>
+                                    <li id="menu-item-546"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546"><a
+                                            href="https://themebubble.com/demo/webify/architect/blog/">Blog</a></li>
+                                    <li id="menu-item-545"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a
+                                            href="https://themebubble.com/demo/webify/architect/contact/">Contact</a></li>
+                                </ul>
+                            </nav>
+                            <button class="btn1" onclick="location.href='/login'">Login</button>
+                            <button class="btn2" onclick="location.href='/register'">Register</button>
+                            <style>
+                                .btn1{
+                                    margin: 20px 20px;
+                                    padding: 5px 20px;
+                                    border-radius: 5px;
+                                }
+                                .btn2{
+                                    margin: 20px 0px; 
+                                    padding: 5px 20px;
+                                    border-radius: 5px;
+                                }
+                            </style>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header> -->
+
+
+
+    <!-- Header -->
+
+    <!-- <header class="header" style="background-color: rgba(0, 0, 0, 0.6);">
             <div class="container">
-                <div class="tb-main-header-in">
-                    <div class="tb-main-header-left">
-                        <div class="tb-site-branding"> <a href="https://themebubble.com/demo/webify/architect/"
-                                class="tb-custom-logo-link "><img src="{% static 'img/logo3.PNG' %}" alt="logo"
+                <div class="row">
+                    <div class="col">
+                        <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                            <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+                                <div class="logo"><a href="/">Book-Kart</a></div>
+                                <nav class="main_nav">
+                                    <ul class="d-flex flex-row align-items-start justify-content-start">
+                                        <li ><a href="/">Home</a></li>
+                                        <li class="active"><a href="/about/">About us</a></li>
+                                        
+                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="/register/" class="btn">Register</a></li>
+                                        <li><a href="/login/" class="btn">Login</a></li>
+                                        <style>
+                                            .btn{
+                                                /* margin: 20px 20px;
+                                                padding: 5px 20px; */
+                                                border: 2px solid white;
+                                                border-radius: 5px;
+                                                padding: 5px 20px;
+                                                background-color:#D52C08;
+                                                margin-top: 0px;
+                                                
+                                            }
+                                            ul {
+                                                list-style-type: none;
+                                            }
+                                            /* .btn2{
+                                                margin: 20px 0px; 
+                                                padding: 5px 20px;
+                                                border-radius: 5px;
+                                            } */
+                                        </style>
+    
+                                    </ul>
+                                </nav>
+    
+                                <!-- Hamburger -->
+
+    <div class="hamburger ml-auto">
+        <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 35px;
+                height: 5px;
+                background-color: white;
+                margin: 6px 200px;
+                transition: 0.4s;
+            }
+
+            .change .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                transform: rotate(-45deg) translate(-9px, 6px);
+            }
+
+            .change .bar2 {
+                opacity: 0;
+            }
+
+            .change .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                transform: rotate(45deg) translate(-8px, -8px);
+            }
+        </style>
+        <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <!-- <script>
+                                    function myFunction(x) {
+                                        x.classList.toggle("change");
+                                    }
+                                </script> -->
+
+
+    </div>
+
+    </div>
+    <!-- </div>
+    </div>
+    </div>
+    </div> -->
+    
+
+    <header class="header scrolled">
+        <style>
+            .header.scrolled {
+                background: rgba(24, 24, 24, 0.6);
+            }
+
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                -webkit-transition: all 200ms ease;
+                -moz-transition: all 200ms ease;
+                -ms-transition: all 200ms ease;
+                -o-transition: all 200ms ease;
+                transition: all 200ms ease;
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+                            <!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
+                            <div class="tb-site-branding"> <a href="https://themebubble.com/demo/webify/architect/"
+                                class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
                                     class="tb-custom-logo"></a></div>
                         <style>
                             .tb-custom-logo {
                                 max-height: 136px;
                             }
 
-                            img {
+                            .tb-custom-logo-link img {
                                 border: 0;
                                 max-width: 100%;
                                 height: 70px;
                                 max-height: 100%;
                             }
                         </style>
-                    </div>
-                    <div class="tb-main-header-right">
-                        <div class="tb-m-menu-btn"><span></span></div>
-                        <nav class="tb-main-nav tb-primary-nav">
-                            <ul id="nav" class="tb-primary-nav-list">
-                                <li id="menu-item-566"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-566">
-                                    <a href="https://themebubble.com/demo/webify/architect/">Home</a>
-                                </li>
-                                <li id="menu-item-523"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor menu-item-has-children menu-item-523 tb-mega-menu">
-                                    <a href="https://themebubble.com/demo/webify/architect/#">Mega Menu</a>
-                                    <ul class="tb-mega-wrapper"
-                                        style="background-image:url({% static 'img/books7.jpg' %});  background-size: 300px;" >
-                                        <li id="menu-item-524"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-524">
-                                            <a class="tb-font-name">Engineering Books</a>
-                                            <ul class="tb-mega-menu-list">
-                                                <li id="menu-item-525"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-525">
-                                                    <a href="https://themebubble.com/demo/webify/">CSE</a>
-                                                </li>
-                                                <li id="menu-item-526"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-526">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/architect/">Civil</a>
-                                                </li>
-                                                <li id="menu-item-527"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-527">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/consult/">Mechanical</a>
-                                                </li>
-                                                <li id="menu-item-528"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-528">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/crypto/">Architecture</a>
-                                                </li>
-                                            </ul><i class="tb-plus tb-dropdown"></i>
-                                        </li>
-                                        <li id="menu-item-529"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-529">
-                                            <a class="tb-font-name">Biology</a>
-                                            <ul class="tb-mega-menu-list">
-                                                <li id="menu-item-530"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-530">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/marketing/">Pharmacy</a>
-                                                </li>
-                                                <li id="menu-item-531"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-531">
-                                                    <a href="https://themebubble.com/demo/webify/Yoga/">MBBS</a>
-                                                </li>
-                                                <li id="menu-item-532"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-532">
-                                                    <a href="https://themebubble.com/demo/webify/medical/">Ayurveda</a>
-                                                </li>
-                                                <li id="menu-item-533"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533">
-                                                    <a href="https://themebubble.com/demo/webify/app-landing/">Homiopathic
-                                                        </a>
-                                                </li>
-                                            </ul><i class="tb-plus tb-dropdown"></i>
-                                        </li>
-                                        <li id="menu-item-534"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-534">
-                                            <a class="tb-font-name">Stationary</a>
-                                            <ul class="tb-mega-menu-list">
-                                                <li id="menu-item-535"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-535">
-                                                    <a href="https://themebubble.com/demo/webify/creative/">Bag</a>
-                                                </li>
-                                                <li id="menu-item-536"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-536">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/photography/">Container</a>
-                                                </li>
-                                                <li id="menu-item-537"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537">
-                                                    <a href="https://themebubble.com/demo/webify/portfolio-masonry/">Scale
-                                                        </a>
-                                                </li>
-                                                <li id="menu-item-538"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-538">
-                                                    <a
-                                                        href="https://themebubble.com/demo/webify/restaurant/">Others</a>
-                                                </li>
-                                            </ul><i class="tb-plus tb-dropdown"></i>
-                                        </li>
-                                        <li id="menu-item-539"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-539">
-                                            <a class="tb-font-name">Other</a>
-                                            <ul class="tb-mega-menu-list">
-                                                <li id="menu-item-540"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-540">
-                                                    <a href="https://themebubble.com/demo/webify/portfolio-section/">Novels
-                                                        </a>
-                                                </li>
-                                                <li id="menu-item-541"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
-                                                    <a href="https://themebubble.com/demo/webify/resume/">Magazine</a>
-                                                </li>
-                                                <li id="menu-item-541"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
-                                                    <a href="https://themebubble.com/demo/webify/resume/">Comic book</a>
-                                                </li>
-                                                <li id="menu-item-541"
-                                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-541">
-                                                    <a href="https://themebubble.com/demo/webify/resume/">History book</a>
-                                                </li>
-                                            </ul><i class="tb-plus tb-dropdown"></i>
-                                        </li>
-                                    </ul><i class="tb-plus tb-dropdown"></i>
-                                </li>
-                                <li id="menu-item-558"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-558"><a
-                                        href="https://themebubble.com/demo/webify/architect/about/">About</a></li>
-                                <li id="menu-item-546"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546"><a
-                                        href="https://themebubble.com/demo/webify/architect/blog/">Blog</a></li>
-                                <li id="menu-item-545"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-545"><a
-                                        href="https://themebubble.com/demo/webify/architect/contact/">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="tb-header-btn"><a href="https://themebubble.com/demo/webify/architect/#"
-                                class="tb-btn  tb-style10">Get Webify Today</a></div>
+                            <nav class="main_nav">
+                                <ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li><a href="/">Home</a></li>
+                                    <li class="active"><a href="/about/">About us</a></li>
+
+                                    <li><a href="#">Contact</a></li>
+                                    <li><a href="/register/" class="btn">Register</a></li>
+                                    <li><a href="/login/" class="btn">Login</a></li>
+                                    <style>
+                                        
+                                        .btn {
+                                            /* margin: 20px 20px;
+                                                padding: 5px 20px; */
+                                            border: 2px solid white;
+                                            border-radius: 5px;
+                                            padding: 5px 20px;
+                                            background-color: #D52C08;
+                                            margin-top: 0px;
+
+                                        }
+
+                                        ul {
+                                            list-style-type: none;
+                                        }
+
+                                        /* .btn2{
+                                                margin: 20px 0px; 
+                                                padding: 5px 20px;
+                                                border-radius: 5px;
+                                            } */
+                                    </style>
+
+                                </ul>
+                            </nav>
+
+                            <!-- Hamburger -->
+
+                            <div class="hamburger ml-auto">
+                                <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <style>
+                                    .bar1,
+                                    .bar2,
+                                    .bar3 {
+                                        width: 35px;
+                                        height: 5px;
+                                        background-color: white;
+                                        margin: 6px 200px;
+                                        transition: 0.4s;
+                                    }
+
+                                    .change .bar1 {
+                                        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                                        transform: rotate(-45deg) translate(-9px, 6px);
+                                    }
+
+                                    .change .bar2 {
+                                        opacity: 0;
+                                    }
+
+                                    .change .bar3 {
+                                        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                                        transform: rotate(45deg) translate(-8px, -8px);
+                                    }
+                                </style>
+                                <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+                                <div class="container" onclick="myFunction(this)">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+
+                                <!-- <script>
+                                    function myFunction(x) {
+                                        x.classList.toggle("change");
+                                    }
+                                </script> -->
+
+
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+
+    <div class="menu">
+        <div class="menu_header d-flex flex-row align-items-center justify-content-start">
+            <div class="menu_logo"><a href="/">Book-Kart</a></div>
+            <div class="menu_close_container ml-auto">
+                <div class="menu_close">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_content">
+            <ul>
+                <li><a href="inex.html">Home</a></li>
+                <li><a href="/about/">About us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/register/">Register</a></li>
+                <li><a href="/login/">Login</a></li>
+            </ul>
+        </div>
+        <div class="menu_social">
+            <div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+            <!-- <ul class="d-flex flex-row align-items-start justify-content-start">
+                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
     <div class="tb-content elementor-page" style="margin-bottom: 465px;">
         <div class="container">
             <div class="row">
@@ -398,11 +685,9 @@
                                                             data-widget_type="image.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="elementor-image"> <img width="480"
-                                                                        height="600"
-                                                                        src="{% static 'img/book2.jpg' %}"
+                                                                        height="600" src="{% static 'img/book2.jpg' %}"
                                                                         class="attachment-full size-full" alt=""
                                                                         loading="lazy"
-
                                                                         sizes="(max-width: 480px) 100vw, 480px"></div>
                                                             </div>
                                                         </div>
@@ -440,66 +725,77 @@
                                                                         change before vertical architectures of
                                                                         modernism for society.</div>
                                                                 </div> -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-9b7ecaa elementor-widget elementor-widget-spacer"
-                                                            data-id="9b7ecaa" data-element_type="widget"
-                                                            data-widget_type="spacer.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="elementor-spacer">
-                                                                    <div class="elementor-spacer-inner"></div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="elementor-element elementor-element-aa5f80f elementor-invisible elementor-widget elementor-widget-webify-accordion-widget"
-                                                            data-id="aa5f80f" data-element_type="widget"
-                                                            data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}"
-                                                            data-widget_type="webify-accordion-widget.default">
-                                                            <div class="elementor-widget-container">
-                                                                <div class="tb-accordian-wrap tb-style1">
-                                                                    <div class="tb-accordian active ">
-                                                                        <div
-                                                                            class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
-                                                                            - Frank Zappa <span
-                                                                                class="tb-accordian-toggle fa fa-angle-down"></span>
-                                                                        </div>
-                                                                        <div class="tb-accordian-body"
-                                                                            style="display: block;">
-                                                                            <p>“So many books, so little time.”</p>
-                                                                        </div>
+                                                            <div class="elementor-element elementor-element-9b7ecaa elementor-widget elementor-widget-spacer"
+                                                                data-id="9b7ecaa" data-element_type="widget"
+                                                                data-widget_type="spacer.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="elementor-spacer">
+                                                                        <div class="elementor-spacer-inner"></div>
                                                                     </div>
-                                                                    <div class="tb-accordian">
-                                                                        <div
-                                                                            class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
-                                                                            - Jane Austen, Northanger Abbey <span
-                                                                                class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-element elementor-element-aa5f80f elementor-invisible elementor-widget elementor-widget-webify-accordion-widget"
+                                                                data-id="aa5f80f" data-element_type="widget"
+                                                                data-settings="{&quot;_animation&quot;:&quot;fadeIn&quot;}"
+                                                                data-widget_type="webify-accordion-widget.default">
+                                                                <div class="elementor-widget-container">
+                                                                    <div class="tb-accordian-wrap tb-style1">
+                                                                        <div class="tb-accordian active ">
+                                                                            <div
+                                                                                class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
+                                                                                - Frank Zappa <span
+                                                                                    class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                            </div>
+                                                                            <div class="tb-accordian-body"
+                                                                                style="display: block;">
+                                                                                <p>“So many books, so little time.”</p>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="tb-accordian-body"
-                                                                            style="display: none;">
-                                                                            <p>
-                                                                                “The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”</p>
+                                                                        <div class="tb-accordian">
+                                                                            <div
+                                                                                class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
+                                                                                - Jane Austen, Northanger Abbey <span
+                                                                                    class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                            </div>
+                                                                            <div class="tb-accordian-body"
+                                                                                style="display: none;">
+                                                                                <p>
+                                                                                    “The person, be it gentleman or
+                                                                                    lady, who has not pleasure in a good
+                                                                                    novel, must be intolerably stupid.”
+                                                                                </p>
+                                                                            </div>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="tb-accordian">
-                                                                        <div
-                                                                            class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
-                                                                            - Haruki Murakami, Norwegian Wood <span
-                                                                                class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                        <div class="tb-accordian">
+                                                                            <div
+                                                                                class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
+                                                                                - Haruki Murakami, Norwegian Wood <span
+                                                                                    class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                            </div>
+                                                                            <div class="tb-accordian-body"
+                                                                                style="display: none;">
+                                                                                <p>“If you only read the books that
+                                                                                    everyone else is reading, you can
+                                                                                    only think what everyone else is
+                                                                                    thinking.”</p>
+                                                                            </div>
                                                                         </div>
-                                                                        <div class="tb-accordian-body"
-                                                                            style="display: none;">
-                                                                            <p>“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”</p>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="tb-accordian">
-                                                                        <div
-                                                                            class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
-                                                                            - Charles W. Eliot <span
-                                                                                class="tb-accordian-toggle fa fa-angle-down"></span>
-                                                                        </div>
-                                                                        <div class="tb-accordian-body"
-                                                                            style="display: none;">
-                                                                            <p>“Books are the quietest and most constant of friends; they are the most accessible and wisest of counselors, and the most patient of teachers.”</p>
+                                                                        <div class="tb-accordian">
+                                                                            <div
+                                                                                class="tb-accordian-title tb-fw-regular tb-f18-lg tb-black111-c tb-font-name">
+                                                                                - Charles W. Eliot <span
+                                                                                    class="tb-accordian-toggle fa fa-angle-down"></span>
+                                                                            </div>
+                                                                            <div class="tb-accordian-body"
+                                                                                style="display: none;">
+                                                                                <p>“Books are the quietest and most
+                                                                                    constant of friends; they are the
+                                                                                    most accessible and wisest of
+                                                                                    counselors, and the most patient of
+                                                                                    teachers.”</p>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -509,7 +805,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                 </section>
                                 <section
                                     class="elementor-section elementor-top-section elementor-element elementor-element-87abe52 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
@@ -2194,13 +2489,15 @@
                                                                                                             class="tb-text-box-in">
                                                                                                             <h2
                                                                                                                 class="tb-special-text tb-text-box-slider-count-item tb-f48-lg tb-line0-9 tb-white-c  tb-m0 tb-mb-3">
-                                                                                                                1.1k</h2>
+                                                                                                                1.1k
+                                                                                                            </h2>
                                                                                                             <div
                                                                                                                 class="empty-space marg-lg-b20">
                                                                                                             </div>
                                                                                                             <h3
                                                                                                                 class="tb-font-name tb-f18-lg tb-text-box-slider-title tb-white-c tb-font-name tb-m0 tb-mt-3 tb-mb-6">
-                                                                                                                Product added
+                                                                                                                Product
+                                                                                                                added
                                                                                                                 Completed
                                                                                                             </h3>
                                                                                                             <div
@@ -2208,7 +2505,18 @@
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="tb-white-c7 tb-text-box-slider-content  tb-mb-6 tb-mt-6">
-                                                                                                                We help them to buy and sell their product. No matter which is old or new Product.
+                                                                                                                We help
+                                                                                                                them to
+                                                                                                                buy and
+                                                                                                                sell
+                                                                                                                their
+                                                                                                                product.
+                                                                                                                No
+                                                                                                                matter
+                                                                                                                which is
+                                                                                                                old or
+                                                                                                                new
+                                                                                                                Product.
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="tb-text-box-btn">
@@ -2248,14 +2556,17 @@
                                                                                                             <h3
                                                                                                                 class="tb-font-name tb-f18-lg tb-text-box-slider-title tb-white-c tb-font-name tb-m0 tb-mt-3 tb-mb-6">
 
-                                                                                                                Deal Completed
+                                                                                                                Deal
+                                                                                                                Completed
                                                                                                             </h3>
                                                                                                             <div
                                                                                                                 class="empty-space marg-lg-b20">
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="tb-white-c7 tb-text-box-slider-content  tb-mb-6 tb-mt-6">
-                                                                                                                here 700 deal generated.
+                                                                                                                here 700
+                                                                                                                deal
+                                                                                                                generated.
                                                                                                             </div>
                                                                                                             <div
                                                                                                                 class="tb-text-box-btn">
@@ -2820,13 +3131,16 @@
                                                                         <div
                                                                             class="tb-video-blog-text tb-style1 tb-radious-4 tb-border">
                                                                             <div class="tb-section-heading tb-style2">
-                                                                                <div class="tb-f16-lg">The City Library Stockholms
-                                                                                    </div>
+                                                                                <div class="tb-f16-lg">The City Library
+                                                                                    Stockholms
+                                                                                </div>
                                                                                 <div class="empty-space marg-lg-b10">
                                                                                 </div>
                                                                                 <h2
                                                                                     class="tb-f36-lg tb-f25-sm tb-font-name tb-m0">
-                                                                                    “My best friends are books, I can easily read them and take them wherever I go
+                                                                                    “My best friends are books, I can
+                                                                                    easily read them and take them
+                                                                                    wherever I go
                                                                                     ”</h2>
                                                                                 <div
                                                                                     class="empty-space marg-lg-b30 marg-sm-b30">
@@ -2834,8 +3148,9 @@
                                                                             </div>
                                                                             <div class="tb-video-btn"><a
                                                                                     href="https://themebubble.com/demo/webify/architect/portfolio/hong-kong-youth/"
-                                                                                    class="tb-btn tb-style1">- Deborah Roberts
-                                                                                    </a></div>
+                                                                                    class="tb-btn tb-style1">- Deborah
+                                                                                    Roberts
+                                                                                </a></div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-lg-7">
@@ -2920,7 +3235,8 @@
                                                                     <div class="empty-space marg-lg-b25"></div>
                                                                     <h2
                                                                         class="tb-f32-lg tb-f28-sm tb-font-name tb-big-heading tb-font-name tb-mt-7 tb-mb-10 tb-mt-5-sm tb-mb-9-sm">
-                                                                        Trusted by over 50+ University<br> Universitys all over the
+                                                                        Trusted by over 50+ University<br> Universitys
+                                                                        all over the
                                                                         India.</h2>
                                                                     <div class="empty-space marg-lg-b50 marg-sm-b40">
                                                                     </div>
@@ -2981,13 +3297,13 @@
                                                                         </div>
                                                                         <div class="col-sm-4 col-6">
                                                                             <div class="tb-client tb-style3 tb-flex">
-                                                                                <img src="img/pdpu.jpg"
+                                                                                <img src="{% static 'img/pdpu.jpg' %}"
                                                                                     alt="client-image">
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-4 col-6">
                                                                             <div class="tb-client tb-style3 tb-flex">
-                                                                                <img src="img/Msu.png"
+                                                                                <img src="{% static 'img/Msu.png' %}"
                                                                                     alt="client-image">
                                                                             </div>
                                                                         </div>
@@ -3005,7 +3321,7 @@
                                                                         </div>
                                                                         <div class="col-sm-4 col-6">
                                                                             <div class="tb-client tb-style3 tb-flex">
-                                                                                <img src="{% static 'img/itm.png' %"
+                                                                                <img src="{% static 'img/itm.png' %}"
                                                                                     alt="client-image">
                                                                             </div>
                                                                         </div>
@@ -3241,7 +3557,7 @@
             </div>
         </div>
     </div>
-    <footer class="tb-site-footer tb-style1 tb-dark-footer tb-111-bg tb-sticky-footer">
+    <!-- <footer class="tb-site-footer tb-style1 tb-dark-footer tb-111-bg tb-sticky-footer">
         <hr>
         <div class="empty-space marg-lg-b40 marg-sm-b40"></div>
         <div class="container">
@@ -3341,7 +3657,9 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
+    
+
     <div id="tb-scrollup"><i class="fa fa-angle-up"></i></div>
     <div class="tb-video-popup">
         <div class="tb-video-popup-overlay"></div>
@@ -3350,7 +3668,7 @@
             <div class="tb-video-popup-container">
                 <div class="tb-video-popup-align">
                     <div class="embed-responsive embed-responsive-16by9"> <iframe class="embed-responsive-item"
-                            src="assets/saved_resource.html"></iframe></div>
+                            src="{% static 'assets/saved_resource.html' %}"></iframe></div>
                 </div>
                 <div class="tb-video-popup-close"></div>
             </div>
@@ -3362,7 +3680,9 @@
         id="webify-main-js-extra">/* <![CDATA[ */ var get = { "ajaxurl": "https:\/\/themebubble.com\/demo\/webify\/architect\/wp-admin\/admin-ajax.php", "siteurl": "https:\/\/webify-13e95.kxcdn.com\/demo\/webify\/architect\/wp-content\/themes\/webify", "nonce": "d11aa9fe92" }; /* ]]> */</script>
     <script type="text/javascript"
         id="elementor-frontend-js-before">var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "version": "3.0.2", "is_static": false, "urls": { "assets": "https:\/\/themebubble.com\/demo\/webify\/architect\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 5, "title": "Home%20-%20Architect", "excerpt": "", "featuredImage": "https:\/\/webify-13e95.kxcdn.com\/demo\/webify\/architect\/wp-content\/uploads\/sites\/2\/2019\/05\/v3bwnxeinqa.jpg" } };</script>
-    <script src="{$ static 'assets/6c9e3c8306b5c85de759fc649ceca680.js.download' %}" data-minify="1"
+
+    <script src="{% static 'assets/6c9e3c8306b5c85de759fc649ceca680.js.download' %}" data-minify="1" defer=""></script>
+    <script src="{% static 'assets/6c9e3c8306b5c85de759fc649ceca680.js.download' %}" data-minify="1"
         defer=""></script>
     <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1613665356 --><span
         id="elementor-device-mode" class="elementor-screen-only"></span>

@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'k%*i%^bop%@%0z)%b4#m5tdg#^(16n5ey9x7kf0b@&=j2fyu^-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['book-kart-vh.herokuapp.com', 'localhost', '127.0.0.1']
 
