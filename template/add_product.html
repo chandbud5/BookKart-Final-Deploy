@@ -309,131 +309,126 @@
 	        </div>
 	    </header> -->
 
-	    <header class="header scrolled">
-        <style>
-            .header.scrolled {
-                background: rgba(24, 24, 24, 0.6);
-            }
+			<header class="header" >
+ 	     <div class="container" style="background-color: #808080">
+ 	       <div class="row">
+ 	         <div class="col">
+ 	           <div class="header_content d-flex flex-row align-items-center justify-content-start">
+ 	             <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
 
-            .header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 100;
-                -webkit-transition: all 200ms ease;
-                -moz-transition: all 200ms ease;
-                -ms-transition: all 200ms ease;
-                -o-transition: all 200ms ease;
-                transition: all 200ms ease;
-            }
-        </style>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
-                        <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-                            <!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
-                            <div class="tb-site-branding"> <a href="/"
-                                class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
-                                    class="tb-custom-logo"></a></div>
-                        <style>
-                            .tb-custom-logo {
-                                max-height: 136px;
-                            }
+ 	               <!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
+ 	               <div class="tb-site-branding"> <a href="/"
+ 	                 class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
+ 	                   class="tb-custom-logo"></a></div>
+ 	             <style>
+ 	               .tb-custom-logo {
+ 	                 max-height: 136px;
+ 	               }
 
-                            .tb-custom-logo-link img {
-                                border: 0;
-                                max-width: 100%;
-                                height: 70px;
-                                max-height: 100%;
-                            }
-                        </style>
-                            <nav class="main_nav">
-                                <ul class="d-flex flex-row align-items-start justify-content-start">
-                                    <li><a href="/">Home</a></li>
-                                    <li class="active"><a href="/about/">About us</a></li>
+ 	               .tb-custom-logo-link img {
+ 	                 border: 0;
+ 	                 max-width: 100%;
+ 	                 height: 70px;
+ 	                 max-height: 100%;
+ 	               }
+ 	               .header_content {
+ 	                 width: 100%;
+ 	                 height: 88px;
+ 	                 -webkit-transition: all 200ms ease;
+ 	                 -moz-transition: all 200ms ease;
+ 	                 -ms-transition: all 200ms ease;
+ 	                 -o-transition: all 200ms ease;
+ 	                 transition: all 200ms ease;
+ 	 }
+ 	             </style>
+ 	               <nav class="main_nav">
+ 	                 <ul class="d-flex flex-row align-items-start justify-content-start">
+ 	                   <li ><a href="/">Home</a></li>
+ 	                   <li><a href="/about/">About us</a></li>
+ 	                   <li><a href="#">Contact</a></li>
+ 	                   {% if user.is_authenticated %}
+ 	                     <li><a href="/add_product/" class="btn">Sell</a></li>
+ 	                     <li><a href="/logout/" class="btn">LogOut</a></li>
+ 	                   {% else %}
+ 	                     <li><a href="/register/" class="btn">Register</a></li>
+ 	                     <li><a href="/login/" class="btn">Login</a></li>
+ 	                   {% endif %}
+ 	                   <style>
+ 	                     .btn{
+ 	                       /* margin: 20px 20px;
+ 	                       padding: 5px 20px; */
+ 	                       border: 2px solid white;
+ 	                       border-radius: 5px;
+ 	                       padding: 5px 20px;
+ 	                       background-color:#D52C08;
+ 	                       margin-top: 0px;
 
-                                    <li><a href="#">Contact</a></li>
-                                    <style>
+ 	                     }
+ 	                     ul {
+ 	                       list-style-type: none;
+ 	                     }
+ 	                     /* .btn2{
+ 	                       margin: 20px 0px;
+ 	                       padding: 5px 20px;
+ 	                       border-radius: 5px;
+ 	                     } */
+ 	                   </style>
 
-                                        .btn {
-                                            /* margin: 20px 20px;
-                                                padding: 5px 20px; */
-                                            border: 2px solid white;
-                                            border-radius: 5px;
-                                            padding: 5px 20px;
-                                            background-color: #D52C08;
-                                            margin-top: 0px;
+ 	                 </ul>
+ 	               </nav>
 
-                                        }
+ 	               <!-- Hamburger -->
 
-                                        ul {
-                                            list-style-type: none;
-                                        }
+ 	               <div class="hamburger ml-auto">
+ 	                 <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+ 	                 <meta name="viewport" content="width=device-width, initial-scale=1" >
+ 	               <style>
+ 	                 .bar1,
+ 	                 .bar2,
+ 	                 .bar3 {
+ 	                   width: 35px;
+ 	                   height: 5px;
+ 	                   background-color: white;
+ 	                   margin: 6px 200px;
+ 	                   transition: 0.4s;
+ 	                 }
 
-                                        /* .btn2{
-                                                margin: 20px 0px;
-                                                padding: 5px 20px;
-                                                border-radius: 5px;
-                                            } */
-                                    </style>
+ 	                 .change .bar1 {
+ 	                   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+ 	                   transform: rotate(-45deg) translate(-9px, 6px);
+ 	                 }
 
-                                </ul>
-                            </nav>
+ 	                 .change .bar2 {
+ 	                   opacity: 0;
+ 	                 }
 
-                            <!-- Hamburger -->
+ 	                 .change .bar3 {
+ 	                   -webkit-transform: rotate(45deg) translate(-8px, -8px);
+ 	                   transform: rotate(45deg) translate(-8px, -8px);
+ 	                 }
+ 	               </style>
+ 	               <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+ 	               <div class="container" onclick="myFunction(this)">
+ 	                 <div class="bar1"></div>
+ 	                 <div class="bar2"></div>
+ 	                 <div class="bar3"></div>
+ 	               </div>
 
-                            <div class="hamburger ml-auto">
-                                <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
-                                <meta name="viewport" content="width=device-width, initial-scale=1">
-                                <style>
-                                    .bar1,
-                                    .bar2,
-                                    .bar3 {
-                                        width: 35px;
-                                        height: 5px;
-                                        background-color: white;
-                                        margin: 6px 200px;
-                                        transition: 0.4s;
-                                    }
-
-                                    .change .bar1 {
-                                        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-                                        transform: rotate(-45deg) translate(-9px, 6px);
-                                    }
-
-                                    .change .bar2 {
-                                        opacity: 0;
-                                    }
-
-                                    .change .bar3 {
-                                        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-                                        transform: rotate(45deg) translate(-8px, -8px);
-                                    }
-                                </style>
-                                <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
-                                <div class="container" onclick="myFunction(this)">
-                                    <div class="bar1"></div>
-                                    <div class="bar2"></div>
-                                    <div class="bar3"></div>
-                                </div>
-
-                                <!-- <script>
-                                    function myFunction(x) {
-                                        x.classList.toggle("change");
-                                    }
-                                </script> -->
+ 	               <!-- <script>
+ 	                 function myFunction(x) {
+ 	                   x.classList.toggle("change");
+ 	                 }
+ 	               </script> -->
 
 
-                            </div>
+ 	               </div>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+ 	             </div>
+ 	           </div>
+ 	         </div>
+ 	       </div>
+ 	     </div>
+ 	   </header>
 
 			<!--Main Navigation-->
 
@@ -578,47 +573,38 @@
 								<div class="table-responsive">
 
 
-								<form action="/action_page.php">
-									<h3>Enter Your Product Details</h3>
-								  <label for="fname">Book name:</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-								  <label for="fname">Book description:</label>
-									<textarea id="w3review" name="w3review" rows="4" cols="20">
+								<form method="POST" action="/add_product/" enctype="multipart/form-data">
+									{% csrf_token %}
+								  	<h3>Enter Your Product Details</h3>
+								  	<label for="bname">Book name:</label>
+								  	<input type="text" id="bname" name="bname" required><br><br>
+								  	<label for="bdesc">Book description:</label>
+									<textarea id="book-desc" name="bdesc" rows="4" cols="25" required>
 									</textarea>
-									<label for="fname">Author name:</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-									<label for="fname">Select catagory</label>
-									<select name = "dropdown">
-            			<option value = "Engineering" selected>Engineering</option>
-            			<option value = "Medical">Medical</option>
-            			<option value = "Law">Law</option>
-									<option value = "Civil services">Civil services</option>
-									<option value = "Novel">Novels</option>
+									<label for="aname">Author name:</label>
+								  <input type="text" id="aname" name="aname" required><br><br>
+									<label for="catagory">Select catagory</label>
+									<select name = "category">
+				            			<option value = "Engineering" selected>Engineering</option>
+				            			<option value = "Medical">Medical</option>
+				            			<option value = "Law">Law</option>
+										<option value = "Civil services">Civil services</option>
+										<option value = "Novel">Novels</option>
 									</select><br></br>
-									<label for="fname">Price :</label>
-								  <input type="text" id="fname" name="fname"><br><br>
-									<label for="fname">Select Your Product:</label>
-									<select name = "dropdown">
-            			<option value = "Book" selected>Book</option>
-            			<option value = "Stationary Item">Stationary Item</option>
-
-
+									<label for="price">Price :</label>
+								  <input type="Number" id="price" name="price" required><br><br>
+									<select name = "item">
+			    	        			<option value = "Book" selected>Book</option>
+				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br>
-									<label for="fname">Enter Mobile Number</label>
-									<input type="text" id="fname" name="fname"><br><br>
-									<label for="fname">Enter Email id:</label>
-									<input type="text" id="fname" name="fname"><br><br>
-
-
+									<label for="phone">Enter Mobile Number</label>
+									<input type="Number" id="phone" name="phone" required><br><br>
+									<label for="email">Enter Email id:</label>
+									<input type="email" id="email" name="email" required><br><br>
 									<p>Upload Your Product Photos</p>
-									<input type="file" id="myFile" name="filename">
-
-
-
-
+									<input type="file" id="myFile" name="productimg" required>
+									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
-
-
 							</div>
 								<!-- <div class="table-responsive">
 									<table class="table table-sm table-borderless mb-0">
@@ -639,14 +625,8 @@
 									</table>
 								</div> -->
 								<hr>
-								<div class="table-responsive mb-2">
-
-								</div>
-								<button type="button" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light">Submit</button>
-
 							</div>
 						</div>
-
 					</section>
 					<!--Section: Block Content-->
 

@@ -1,20 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 
-<!-- saved from url=(0081)https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Product details</title>
   <!-- Roboto Font -->
-  <link rel="stylesheet" href="./Material Design Bootstrap_files/css">
+  <link rel="stylesheet" href="{% static 'Material Design Bootstrap_files/css' %}">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="./Material Design Bootstrap_files/all.css">
+  <link rel="stylesheet" href="{% static 'Material Design Bootstrap_files/all.css' %}">
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="./Material Design Bootstrap_files/bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'Material Design Bootstrap_files/bootstrap.min.css' %}">
   <!-- Material Design Bootstrap -->
-  <link rel="stylesheet" href="./Material Design Bootstrap_files/mdb-pro.min.css">
+  <link rel="stylesheet" href="{% static 'Material Design Bootstrap_files/mdb-pro.min.css' %}">
   <!-- Material Design Bootstrap Ecommerce -->
-  <link rel="stylesheet" href="./Material Design Bootstrap_files/mdb.ecommerce.min.css">
+  <link rel="stylesheet" href="{% static 'Material Design Bootstrap_files/mdb.ecommerce.min.css' %}">
   <!-- Your custom styles (optional) -->
 
 	<style type="text/css">/* Chart.js */
@@ -27,20 +27,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="Travello template project">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-		<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-		<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-		<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-		<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap.min.css' %}">
+		<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
 
 
 	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	    <meta http-equiv="x-ua-compatible" content="ie=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>About me</title>
-	    <link rel="stylesheet" href="assets/10004656050d5e32fb37f87e704beba6.css" data-minify="1">
+	    <link rel="stylesheet" href="{% static 'assets/10004656050d5e32fb37f87e704beba6.css' %}" data-minify="1">
 	    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 	    <link rel="canonical" href="/">
 	    <meta property="og:locale" content="en_US">
@@ -83,12 +83,12 @@
 	            padding: 0 !important
 	        }
 	    </style>
-	    <link rel="stylesheet" id="webify-fonts-css" href="assets/css" type="text/css" media="all">
-	    <link rel="stylesheet" id="webify-font-awesome-css" href="assets/all.min.css" type="text/css"
+	    <link rel="stylesheet" id="webify-fonts-css" href="{% static 'assets/css' %}" type="text/css" media="all">
+	    <link rel="stylesheet" id="webify-font-awesome-css" href="{% static 'assets/all.min.css' %}" type="text/css"
 	        media="all">
-	    <link rel="stylesheet" id="webify-font-awesome-v4-css" href="assets/v4-shims.min.css"
+	    <link rel="stylesheet" id="webify-font-awesome-v4-css" href="{% static 'assets/v4-shims.min.css' %}"
 	        type="text/css" media="all">
-	    <link rel="stylesheet" id="material-icon-css" href="assets/icon" type="text/css" media="all">
+	    <link rel="stylesheet" id="material-icon-css" href="{% static 'assets/icon' %}" type="text/css" media="all">
 	    <style id="webify-style-inline-css" type="text/css">
 	        .tb-error-page {
 	            background-image: url(https://webify-13e95.kxcdn.com/demo/webify/architect/wp-content/themes/webify/assets/img/error-bg.jpg)
@@ -98,7 +98,7 @@
 	            background-image: url(https://webify-13e95.kxcdn.com/demo/webify/architect/wp-content/themes/webify/assets/img/page-header-bg.png)
 	        }
 	    </style>
-	    <script type="text/javascript" src="assets/jquery-1.12.4-wp.js.download"
+	    <script type="text/javascript" src="{% static 'assets/jquery-1.12.4-wp.js.download' %}"
 	        id="jquery-core-js"></script>
 	    <link rel="https://api.w.org/" href="/wp-json/">
 	    <link rel="alternate" type="application/json"
@@ -151,120 +151,131 @@
 	    class="home page-template-default page page-id-5 wp-embed-responsive elementor-default elementor-kit-646 elementor-page elementor-page-5"
 	    data-elementor-device-mode="desktop" data-new-gr-c-s-check-loaded="14.996.0" data-gr-ext-installed="">
 	    <div class="tb-preloader" style="display: none;">
-	        <div class="tb-preloader-in" style="display: none;"><img src="img/logo3.PNG"
+	        <div class="tb-preloader-in" style="display: none;"><img src="{% static 'img/logo3.PNG' %}"
 	                alt="loader-logo"></div>
 	    </div>
+			<header class="header" >
+		    <div class="container" style="background-color: #808080">
+		      <div class="row">
+		        <div class="col">
+		          <div class="header_content d-flex flex-row align-items-center justify-content-start">
+		            <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+
+		              <!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
+		              <div class="tb-site-branding"> <a href="/"
+		                class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
+		                  class="tb-custom-logo"></a></div>
+		            <style>
+		              .tb-custom-logo {
+		                max-height: 136px;
+		              }
+
+		              .tb-custom-logo-link img {
+		                border: 0;
+		                max-width: 100%;
+		                height: 70px;
+		                max-height: 100%;
+		              }
+		              .header_content {
+		                width: 100%;
+		                height: 88px;
+		                -webkit-transition: all 200ms ease;
+		                -moz-transition: all 200ms ease;
+		                -ms-transition: all 200ms ease;
+		                -o-transition: all 200ms ease;
+		                transition: all 200ms ease;
+		}
+		            </style>
+		              <nav class="main_nav">
+		                <ul class="d-flex flex-row align-items-start justify-content-start">
+		                  <li ><a href="/">Home</a></li>
+		                  <li><a href="/about/">About us</a></li>
+		                  <li><a href="#">Contact</a></li>
+		                  {% if user.is_authenticated %}
+		                    <li><a href="/add_product/" class="btn">Sell</a></li>
+		                    <li><a href="/logout/" class="btn">LogOut</a></li>
+		                  {% else %}
+		                    <li><a href="/register/" class="btn">Register</a></li>
+		                    <li><a href="/login/" class="btn">Login</a></li>
+		                  {% endif %}
+		                  <style>
+		                    .btn{
+		                      /* margin: 20px 20px;
+		                      padding: 5px 20px; */
+		                      border: 2px solid white;
+		                      border-radius: 5px;
+		                      padding: 5px 20px;
+		                      background-color:#D52C08;
+		                      margin-top: 0px;
+
+		                    }
+		                    ul {
+		                      list-style-type: none;
+		                    }
+		                    /* .btn2{
+		                      margin: 20px 0px;
+		                      padding: 5px 20px;
+		                      border-radius: 5px;
+		                    } */
+		                  </style>
+
+		                </ul>
+		              </nav>
+
+		              <!-- Hamburger -->
+
+		              <div class="hamburger ml-auto">
+		                <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+		                <meta name="viewport" content="width=device-width, initial-scale=1" >
+		              <style>
+		                .bar1,
+		                .bar2,
+		                .bar3 {
+		                  width: 35px;
+		                  height: 5px;
+		                  background-color: white;
+		                  margin: 6px 200px;
+		                  transition: 0.4s;
+		                }
+
+		                .change .bar1 {
+		                  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+		                  transform: rotate(-45deg) translate(-9px, 6px);
+		                }
+
+		                .change .bar2 {
+		                  opacity: 0;
+		                }
+
+		                .change .bar3 {
+		                  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+		                  transform: rotate(45deg) translate(-8px, -8px);
+		                }
+		              </style>
+		              <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+		              <div class="container" onclick="myFunction(this)">
+		                <div class="bar1"></div>
+		                <div class="bar2"></div>
+		                <div class="bar3"></div>
+		              </div>
+
+		              <!-- <script>
+		                function myFunction(x) {
+		                  x.classList.toggle("change");
+		                }
+		              </script> -->
+
+
+		              </div>
+
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		  </header>
 	    <!-- <div class="tb-solid-header-height" style="height: 0px;"></div> -->
-			<header class="header">
-				<div class="container">
-					<div class="row">
-						<div class="col">
-							<div class="header_content d-flex flex-row align-items-center justify-content-start">
-								<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-									<!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
-									<div class="tb-site-branding"> <a href="/"
-										class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
-											class="tb-custom-logo"></a></div>
-								<style>
-									.tb-custom-logo {
-										max-height: 136px;
-									}
 
-									.tb-custom-logo-link img {
-										border: 0;
-										max-width: 100%;
-										height: 70px;
-										max-height: 100%;
-									}
-								</style>
-									<nav class="main_nav">
-										<ul class="d-flex flex-row align-items-start justify-content-start">
-											<li class="active"><a href="/">Home</a></li>
-											<li><a href="/about/">About us</a></li>
-											<li><a href="#">Contact</a></li>
-											{% if user.is_authenticated %}
-												<li><a href="/add_product/" class="btn">Sell</a></li>
-												<li><a href="/logout/" class="btn">LogOut</a></li>
-											{% else %}
-												<li><a href="/register/" class="btn">Register</a></li>
-												<li><a href="/login/" class="btn">Login</a></li>
-											{% endif %}
-											<style>
-												.btn{
-													/* margin: 20px 20px;
-													padding: 5px 20px; */
-													border: 2px solid white;
-													border-radius: 5px;
-													padding: 5px 20px;
-													background-color:#D52C08;
-													margin-top: 0px;
-
-												}
-												ul {
-													list-style-type: none;
-												}
-												/* .btn2{
-													margin: 20px 0px;
-													padding: 5px 20px;
-													border-radius: 5px;
-												} */
-											</style>
-
-										</ul>
-									</nav>
-
-									<!-- Hamburger -->
-
-									<div class="hamburger ml-auto">
-										<!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
-										<meta name="viewport" content="width=device-width, initial-scale=1" >
-									<style>
-										.bar1,
-										.bar2,
-										.bar3 {
-											width: 35px;
-											height: 5px;
-											background-color: white;
-											margin: 6px 200px;
-											transition: 0.4s;
-										}
-
-										.change .bar1 {
-											-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-											transform: rotate(-45deg) translate(-9px, 6px);
-										}
-
-										.change .bar2 {
-											opacity: 0;
-										}
-
-										.change .bar3 {
-											-webkit-transform: rotate(45deg) translate(-8px, -8px);
-											transform: rotate(45deg) translate(-8px, -8px);
-										}
-									</style>
-									<!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
-									<div class="container" onclick="myFunction(this)">
-										<div class="bar1"></div>
-										<div class="bar2"></div>
-										<div class="bar3"></div>
-									</div>
-
-									<!-- <script>
-										function myFunction(x) {
-											x.classList.toggle("change");
-										}
-									</script> -->
-
-
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
 
 			<!--Main Navigation-->
 
@@ -352,23 +363,23 @@
 
 										<div class="col-12 mb-0">
 											<figure class="view overlay rounded z-depth-1 main-img" style="max-height: 450px;">
-												<a href="./Material Design Bootstrap_files/15a.jpg" data-size="710x823">
-													<img src="./Material Design Bootstrap_files/15a.jpg" class="img-fluid z-depth-1" style="margin-top: -90px; transform-origin: center center; transform: scale(1);">
+												<a href="{% static 'Material Design Bootstrap_files/15a.jpg' %}" data-size="710x823">
+													<img src="{% static 'Material Design Bootstrap_files/15a.jpg' %}" class="img-fluid z-depth-1" style="margin-top: 50px; transform-origin: center center; transform: scale(1);">
 												</a>
 											</figure>
 											<figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-												<a href="./Material Design Bootstrap_files/12a.jpg" data-size="710x823">
-													<img src="./Material Design Bootstrap_files/12a.jpg" class="img-fluid z-depth-1">
+												<a href="{% static 'Material Design Bootstrap_files/12a.jpg' %}" data-size="710x823">
+													<img src="{% static 'Material Design Bootstrap_files/12a.jpg' %}" class="img-fluid z-depth-1">
 												</a>
 											</figure>
 											<figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-												<a href="./Material Design Bootstrap_files/13a.jpg" data-size="710x823">
-													<img src="./Material Design Bootstrap_files/13a.jpg" class="img-fluid z-depth-1">
+												<a href="{% static 'Material Design Bootstrap_files/13a.jpg' %}" data-size="710x823">
+													<img src="{% static 'Material Design Bootstrap_files/13a.jpg' %}" class="img-fluid z-depth-1">
 												</a>
 											</figure>
 											<figure class="view overlay rounded z-depth-1" style="visibility: hidden;">
-												<a href="./Material Design Bootstrap_files/14a.jpg" data-size="710x823">
-													<img src="./Material Design Bootstrap_files/14a.jpg" class="img-fluid z-depth-1">
+												<a href="{% static 'Material Design Bootstrap_files/14a.jpg' %}" data-size="710x823">
+													<img src="{% static 'Material Design Bootstrap_files/14a.jpg' %}" class="img-fluid z-depth-1">
 												</a>
 											</figure>
 										</div>
@@ -376,25 +387,25 @@
 											<div class="row">
 												<div class="col-3">
 													<div class="view overlay rounded z-depth-1 gallery-item hoverable">
-														<img src="./Material Design Bootstrap_files/12a.jpg" class="img-fluid">
+														<img src="{% static 'Material Design Bootstrap_files/12a.jpg' %}" class="img-fluid">
 														<div class="mask rgba-white-slight"></div>
 													</div>
 												</div>
 												<div class="col-3">
 													<div class="view overlay rounded z-depth-1 gallery-item hoverable">
-														<img src="./Material Design Bootstrap_files/13a.jpg" class="img-fluid">
+														<img src="{% static 'Material Design Bootstrap_files/13a.jpg' %}" class="img-fluid">
 														<div class="mask rgba-white-slight"></div>
 													</div>
 												</div>
 												<div class="col-3">
 													<div class="view overlay rounded z-depth-1 gallery-item hoverable">
-														<img src="./Material Design Bootstrap_files/14a.jpg" class="img-fluid">
+														<img src="{% static 'Material Design Bootstrap_files/14a.jpg' %}" class="img-fluid">
 														<div class="mask rgba-white-slight"></div>
 													</div>
 												</div>
 												<div class="col-3">
 													<div class="view overlay rounded z-depth-1 gallery-item hoverable">
-														<img src="./Material Design Bootstrap_files/15a.jpg" class="img-fluid">
+														<img src="{% static 'Material Design Bootstrap_files/15a.jpg' %}" class="img-fluid">
 														<div class="mask rgba-white-slight"></div>
 													</div>
 												</div>
@@ -406,12 +417,20 @@
 
 							</div>
 							<div class="col-md-6">
+								<!-- <style>
+								.col-md-6{
+									  margin-top: 25px;
+									}
+									</style> -->
 
-								<h5>Blue denim shirt</h5>
-								<p class="mb-2 text-muted text-uppercase small">Shirts</p>
 
 								<p><span class="mr-1"><strong>Price = 220 Rs.</strong></span></p>
 								<p class="pt-1">Revolution 2020: Love, Corruption, Ambition is a 2011 novel by Chetan Bhagat. Its story is concerned with a love triangle, corruption and a journey of self-discovery. R2020 has addressed the issue of how private coaching institutions exploit aspiring engineering students and how parents put their lifetime's earnings on stake for these classes so that their children can crack engineering exams and change the fortune of the family.</p>
+								<style>
+								p:last-of-type {
+								    margin-bottom: 0;
+								    margin-top: 100px;
+								}</style>
 								<div class="table-responsive">
 									<table class="table table-sm table-borderless mb-0">
 										<tbody>
@@ -484,7 +503,7 @@
 							<div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
 								<h5><span>1</span> review for <span>Fantasy T-shirt</span></h5>
 								<div class="media mt-3 mb-4">
-									<img class="d-flex mr-3 z-depth-1" src="./Material Design Bootstrap_files/placeholder1.jpg" width="62" alt="Generic placeholder image">
+									<img class="d-flex mr-3 z-depth-1" src="{% static 'Material Design Bootstrap_files/placeholder1.jpg' %}" width="62" alt="Generic placeholder image">
 									<div class="media-body">
 										<div class="d-flex justify-content-between">
 											<p class="mt-1 mb-2">
@@ -713,15 +732,15 @@
 
 			<!-- SCRIPTS -->
 			<!-- JQuery -->
-			<script src="./Material Design Bootstrap_files/jquery-3.4.1.min.js.download"></script>
+			<script src="{% static 'Material Design Bootstrap_files/jquery-3.4.1.min.js.download' %}"></script>
 			<!-- Bootstrap tooltips -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/popper.min.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/popper.min.js.download' %}"></script>
 			<!-- Bootstrap core JavaScript -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/bootstrap.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/bootstrap.js.download' %}"></script>
 			<!-- MDB core JavaScript -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/mdb.min.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/mdb.min.js.download' %}"></script>
 				<!-- MDB Ecommerce JavaScript -->
-				<script type="text/javascript" src="./Material Design Bootstrap_files/mdb.ecommerce.min.js.download"></script>
+				<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/mdb.ecommerce.min.js.download' %}"></script>
 			<script>
 				$(document).ready(function () {
 					// MDB Lightbox Init
@@ -739,15 +758,15 @@
 
 			<!-- SCRIPTS -->
 			<!-- JQuery -->
-			<script src="./Material Design Bootstrap_files/jquery-3.4.1.min.js.download"></script>
+			<script src="{% static 'Material Design Bootstrap_files/jquery-3.4.1.min.js.download' %}"></script>
 			<!-- Bootstrap tooltips -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/popper.min.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/popper.min.js.download' %}"></script>
 			<!-- Bootstrap core JavaScript -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/bootstrap.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/bootstrap.js.download' %}"></script>
 			<!-- MDB core JavaScript -->
-			<script type="text/javascript" src="./Material Design Bootstrap_files/mdb.min.js.download"></script>
+			<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/mdb.min.js.download' %}"></script>
 				<!-- MDB Ecommerce JavaScript -->
-				<script type="text/javascript" src="./Material Design Bootstrap_files/mdb.ecommerce.min.js.download"></script>
+				<script type="text/javascript" src="{% static 'Material Design Bootstrap_files/mdb.ecommerce.min.js.download' %}"></script>
 			<script>
 				$(document).ready(function () {
 					// MDB Lightbox Init
