@@ -2,14 +2,6 @@ from django.db import models
 
 # Create your models here.
 
-class user(models.Model):
-	Name = models.CharField(max_length=100)
-	Email = models.EmailField()
-	phone = models.IntegerField()
-	password = models.CharField(max_length=50, default="null")
-	College = models.CharField(max_length=50)
-	Faculty = models.CharField(max_length=30)
-
 class book(models.Model):
 	image = models.ImageField(upload_to='book/')
 	Book_Name = models.CharField(max_length=100)

@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import user
+from django.contrib import messages
+from django.contrib.auth.models import User, auth
+from .models import product, book
 # Create your views here.
 
 def home(request):
@@ -19,30 +21,46 @@ def register(request):
 	return render(request, 'registration.html')
 
 def signup(request):
-	name = request.POST.get('name')
-	email = request.POST.get('email')
-	phone = request.POST.get('phone')
-	college = request.POST.get('college')
-	faculty = request.POST.get('faculty')
-	password = request.POST.get('pass')
-	re_password = request.POST.get('re_pass')
+	if request.method == 'POST':
+		fname = request.POST.get('fname')
+		lname = request.POST.get('lname')
+		e_mail = request.POST.get('email')
+		uname = request.POST.get('uname')
+		pwd = request.POST.get('pass')
+		re_pwd = request.POST.get('re_pass')
 
-	already = user.objects.filter(Email = email)
-
-	if not already:
-		if password==re_password:
-			add_user = user.objects.create()
-			add_user.Name = name
-			add_user.Email = email
-			add_user.phone = phone
-			add_user.College = college
-			add_user.Faculty = faculty
-			add_user.password = password
-			add_user.save()
-
+		already = User.objects.filter(email = e_mail).exists()
+		if not already:	
+			bool_incorrect = False
+			if pwd==re_pwd:
+				user = User.objects.create_user(username=uname, password=pwd, email=e_mail, 
+					first_name=fname, last_name=lname)
+				user.save()
+				messages.info("Registration Successful please login")
+				return redirect('/login/')
+			else:
+				bool_incorrect = True
+				messages.info(request, 'Password does not match')
+				return render(request, 'registration.html')
 		else:
-			print("password does not match")
-	else:
-		print("User Already exists")
+			messages.info(request, 'User Already Exist')
+			return redirect('/login')
 
-	return render(request, 'index.html')
+def authenticate(request):
+	
+	if request.method == 'POST':
+		uname =  request.POST.get("uname")
+		pasw = request.POST.get("pass")
+
+		user = auth.authenticate(username=uname, password=pasw)
+
+		if user is not None:
+			print("LOgin Successful")
+			auth.login(request, user)
+			return redirect('/')
+		else:
+			messages.info(request, "Invalid Credential")
+			return redirect('/login/')
+
+	else:
+		return redirect('/login/')
