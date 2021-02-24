@@ -345,7 +345,7 @@
                                     </ul>
                                 </nav>
     
-                                <!-- Hamburger -->
+                                Hamburger -->
 
     <div class="hamburger ml-auto">
         <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
@@ -444,8 +444,13 @@
                                     <li class="active"><a href="/about/">About us</a></li>
 
                                     <li><a href="#">Contact</a></li>
-                                    <li><a href="/register/" class="btn">Register</a></li>
-                                    <li><a href="/login/" class="btn">Login</a></li>
+                                    {% if user.is_authenticated %}
+                                        <li><a href="/add_product/" class="btn">Sell</a></li>
+                                        <li><a href="/logout/" class="btn">LogOut</a></li>
+                                    {% else %}
+                                        <li><a href="/register/" class="btn">Register</a></li>
+                                        <li><a href="/login/" class="btn">Login</a></li>
+                                    {% endif %}
                                     <style>
                                         
                                         .btn {
@@ -542,8 +547,13 @@
                 <li><a href="inex.html">Home</a></li>
                 <li><a href="/about/">About us</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="/register/">Register</a></li>
-                <li><a href="/login/">Login</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/add_product/">Sell</a></li>
+                    <li><a href="/logout/">Log Out</a></li>
+                {% else %}
+                    <li><a href="/register/">Register</a></li>
+                    <li><a href="/login/">Login</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="menu_social">

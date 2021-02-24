@@ -337,10 +337,14 @@
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="/">Home</a></li>
 									<li><a href="/about/">About us</a></li>
-									
 									<li><a href="#">Contact</a></li>
-									<li><a href="/register/" class="btn">Register</a></li>
-									<li><a href="/login/" class="btn">Login</a></li>
+									{% if user.is_authenticated %}
+										<li><a href="/add_product/" class="btn">Sell</a></li>
+										<li><a href="/logout/" class="btn">LogOut</a></li>
+									{% else %}
+										<li><a href="/register/" class="btn">Register</a></li>
+										<li><a href="/login/" class="btn">Login</a></li>
+									{% endif %}
 									<style>
 										.btn{
 											/* margin: 20px 20px;
@@ -442,17 +446,6 @@
 					<li><a href="/login/">Login</a></li>
 				{% endif %}
 			</ul>
-		</div>
-		<div class="menu_social">
-			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
-			<!-- <ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-				</ul> -->
 		</div>
 	</div>
 
