@@ -599,7 +599,7 @@
 
 
 
-								<form method="POST" action="/add_product/" enctype="multipart/form-data">
+								<form method="POST" action="/verification/" enctype="multipart/form-data">
 									{% csrf_token %}
 								  	<h3>Enter Your Book Details</h3>
 								  	<label for="bname">Book name:</label>
@@ -627,6 +627,8 @@
 									<input type="text" id="phone" name="phone" required><br><br>
 									<label for="email">Enter Email id:</label>
 									<input type="text" id="email" name="email" required><br><br>
+									<label for="otp">Enter OTP</label>
+									<input type="text" id="phone" name="otp" required><br><br>
 									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
 							</div>
