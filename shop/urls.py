@@ -15,7 +15,12 @@ urlpatterns = [
     path('logout/', views.logout, name="logout"),
     path('add_product/', views.add_product, name="add_product"),
     path('sell/', views.sell, name="sell"),
+    path('sell_b/', views.sell_b, name="sell_b"),
     path('search/',views.search, name="search"),
+<<<<<<< HEAD
     path('profile/',views.profile, name="profile"),
+=======
+    path('add_product_b/', views.add_product_b, name="add_product_b"),
+>>>>>>> aaccf34ed846015dad1e70d824a3435d6e28fde8
 ]
 urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
