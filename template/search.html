@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en-US">
+
 <head>
 	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/favicon.ico' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon.ico' %}">
@@ -128,7 +129,6 @@
 		</style>
 	</noscript>
 </head>
-
 
 <body
 	class="home page-template-default page page-id-5 wp-embed-responsive elementor-default elementor-kit-646 elementor-page elementor-page-5"
@@ -312,7 +312,7 @@
 
 
 	<header class="header">
-		<div class="container">
+		<div class="container" style="background-color: #808080">
 			<div class="row">
 				<div class="col">
 					<div class="header_content d-flex flex-row align-items-center justify-content-start">
@@ -335,7 +335,7 @@
 						</style>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="/">Home</a></li>
+									<li><a href="/">Home</a></li>
 									<li><a href="/about/">About us</a></li>
 									<li><a href="#contactpart">Contact</a></li>
 									{% if user.is_authenticated %}
@@ -463,9 +463,9 @@
 					  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 					  </div>
 					<div class="carousel-inner">
-					  <div class="carousel-item active">
+					  <!-- <div class="carousel-item active">
 						<img src="https://cdn.pixabay.com/photo/2017/08/06/22/01/books-2596809_1280.jpg" class="d-block w-100" alt="...">
-					  </div>
+					  </div> -->
 
 					</div>
 					<!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
@@ -522,8 +522,471 @@
 		</div>
 	</div>
 
+	<!-- Search -->
+<div class="home_search">
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_search_container">
+
+						<div class="home_search_title">Search for your Book</div>
+						<div class="home_search_content">
+							<style>
+							.home_search_content {
+										position: absolute;
+										top: -174px;
+										width: calc(100% + 100px);
+										left: -61px;
+										padding-top: 47px;
+										padding-left: 61px;
+										padding-right: 61px;
+										padding-bottom: 59px;
+										background: rgba(192,192,192,0.3);
+										border-radius: 8px;
+										background-color: slategray;
+								}</style>
+							<form action="/search/" class="home_search_form" id="home_search_form">
+								<div
+									class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+									<input type="text" class="search_input search_input_1" placeholder="Book name">
+										<!-- <p>Or</p> -->
+									<input type="text" class="search_input search_input_3" placeholder="Author name">
+
+										<div class="dropdown">
+										  <button class="dropbtn">Catagories</button>
+										  <div class="dropdown-content">
+												<!-- <select name = "category"> -->
+												<a href="#">Engineering</a>
+												<a href="#">Medical</a>
+												<a href="#">Law</a>
+												<a href="#">Civil services</a>
+												<a href="#">Novels</a>
+												<!-- </select> -->
+										  </div>
+										</div>
+
+										<style>
+											.dropbtn {
+											  background-color: #111111;
+											  color: white;
+											  padding: 16px;
+											  font-size: 16px;
+											  border: none;
+											  cursor: pointer;
+											}
+
+											.dropdown {
+											  position: relative;
+											  display: inline-block;
+											}
+
+											.dropdown-content {
+											  display: none;
+											  position: absolute;
+											  background-color: #f9f9f9;
+											  min-width: 160px;
+											  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+											  z-index: 1;
+											}
+
+											.dropdown-content a {
+											  color: black;
+											  padding: 12px 16px;
+											  text-decoration: none;
+											  display: block;
+											}
+
+											.dropdown-content a:hover {background-color: #f1f1f1}
+
+											.dropdown:hover .dropdown-content {
+											  display: block;
+											}
+
+											.dropdown:hover .dropbtn {
+											  background-color: #3e8e41;
+											}
+											</style>
+										<!-- <p>Or</p> -->
+									<!-- <input type="text" class="search_input search_input_4" placeholder="category wise list"
+										required="required"> -->
+
+									<button class="home_search_button">search</button>
+									<style>.home_search_button {
+											    width: 161px;
+											    height: 52px;
+											    background: #181818;
+											    color: #FFFFFF;
+											    font-family: 'Oswald', sans-serif;
+											    font-size: 16px;
+											    font-weight: 400;
+											    text-transform: uppercase;
+											    border-radius: 0px;
+											    border: none;
+											    outline: none;
+											    cursor: pointer;
+											}</style>
+								</div>
+							</form>
+						</div>
+					</div>
+					<style>
+						.home_search_container {
+						    position: absolute;
+						    top: -455px;
+						    width: calc(100% + 122px);
+						    left: -61px;
+						    padding-top: 47px;
+						    padding-left: 61px;
+						    padding-right: 61px;
+						    padding-bottom: 59px;
+						    background: rgba(255,255,255,0.26);
+						    border-radius: 5px;
+						}
+					</style>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Intro -->
+
+	<div class="intro">
+		<div class="intro_background" style="background-image:url(images/intro.png)"></div>
+		<div class="container">
+		</div>
+	</div>
+
+	<!-- Destinations -->
+
+	<div class="destinations" id="destinations">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">Simply Amazing Books</div>
+					<div class="section_title">
+						<h2>Recently Added Books</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+
+						<!-- Destination -->
+						{% for b in books %}
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{b.image.url}}" style="width: 150px;" alt="Book Image">
+									<!-- <div class="spec_offer text-center"><a href="#">Special Offer</a></div> -->
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="/prod/">{{b.Book_Name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{ b.Author }}</p>
+									</div>
+									<div class="destination_price">Rs. {{ b.Price }}</div>
+									<style>
+										.button {
+											background-color: #111111;
+											border: 3px solid black;
+											border-radius: 2px;
+											color: white;
+											padding: 7px 7px;
+											text-align: center;
+											text-decoration: none;
+											display: inline-block;
+											font-size: 16px;
+											margin: 4px 2px;
+											cursor: pointer;
+										}
+									</style>
+									<a href="#" class="button">Buy Now</a>
+									<button class="button">Book description</button>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col text-center">
+					<div class="section_subtitle">Simply amazing Products</div>
+					<div class="section_title">
+						<h2>Recently Added Products</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row destinations_row">
+				<div class="col">
+					<div class="destinations_container item_grid">
+
+						<!-- Destination -->
+						{% for b in products %}
+							<div class="destination item">
+								<div class="destination_image">
+									<img src="{{b.image.url}}" style="width: 150px;" alt="Product Image">
+									<!-- <div class="spec_offer text-center"><a href="#">Special Offer</a></div> -->
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="/prod/">{{b.Product_Name}}</a></div>
+									<div class="destination_subtitle">
+										<p>{{ b.Author }}</p>
+									</div>
+									<div class="destination_price">Rs. {{ b.Price }}</div>
+									<style>
+										.button {
+											background-color: #008CBA;
+											border: 2px solid black;
+											border-radius: 5px;
+											color: white;
+											padding: 7px 7px;
+											text-align: center;
+											text-decoration: none;
+											display: inline-block;
+											font-size: 16px;
+											margin: 4px 2px;
+											cursor: pointer;
+										}
+									</style>
+									<a href="#" class="button">Buy Now</a>
+									<button class="button">Book description</button>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Testimonials -->
+
+	<!-- <div class="testimonials" id="testimonials">
+			<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/testimonials.jpg" data-speed="0.8"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">simply amazing places</div>
+						<div class="section_title"><h2>Testimonials</h2></div>
+					</div>
+				</div>
+				<div class="row testimonials_row">
+					<div class="col"> -->
+
+	<!-- Testimonials Slider -->
+	<!-- <div class="testimonials_slider_container">
+							<div class="owl-carousel owl-theme testimonials_slider">
+Slide -->
+	<!-- <div class="owl-item text-center">
+									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+									<div class="testimonial_author">
+										<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>john turner,</div>
+											<div>client</div>
+										</div>
+									</div>
+								</div> -->
+
+	<!-- Slide -->
+	<!-- <div class="owl-item text-center">
+									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+									<div class="testimonial_author">
+										<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>john turner,</div>
+											<div>client</div>
+										</div>
+									</div>
+								</div> -->
+
+	<!-- Slide -->
+	<!-- <div class="owl-item text-center">
+									<div class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. lobortis dolor. Cras placerat lectus a posuere aliquet. Curabitur quis vehicula odio.</div>
+									<div class="testimonial_author">
+										<div class="testimonial_author_content d-flex flex-row align-items-end justify-content-start">
+											<div>john turner,</div>
+											<div>client</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+	<!-- <div class="test_nav">
+				<ul class="d-flex flex-column align-items-end justify-content-end">
+				</ul>
+			</div>
+		</div> -->
 
 
+	<!-- Footer -->
 
+	<div id="contactpart">
+		<footer class="bg-dark text-center text-white">
+			<!-- Grid container -->
+			<div class="container p-4">
 
+				<!-- Section: Form -->
+				<section class="">
+					<form action="">
+						<!--Grid row-->
+						<div class="row d-flex justify-content-center">
+							<!--Grid column-->
+							<div class="col-auto">
+								<p class="pt-2">
+									<strong style="color:rgb(235, 188, 188);">Sign up for our newsletter</strong>
+
+								</p>
+							</div>
+							<!--Grid column-->
+
+							<!--Grid column-->
+							<div class="col-md-5 col-12">
+								<!-- Email input -->
+								<div class="form-outline form-white mb-4">
+									<input type="email" id="form5Example2" class="form-control"
+										placeholder="Email address" />
+									<label class="form-label" for="form5Example2"></label>
+								</div>
+							</div>
+							<!--Grid column-->
+
+							<!--Grid column-->
+							<div class="col-auto">
+								<!-- Submit button -->
+								<button type="submit" class="btn btn-outline-light mb-4">
+									Subscribe
+								</button>
+							</div>
+							<!--Grid column-->
+						</div>
+						<!--Grid row-->
+					</form>
+				</section>
+				<!-- Section: Form -->
+
+				<!-- Section: Text -->
+				<section class="mb-4">
+					<p style="color:white;">
+						If having any quary please contact us.
+					</p>
+				</section>
+				<!-- Section: Text -->
+
+				<!-- Section: Links -->
+				<section class="">
+					<!--Grid row-->
+					<div class="row">
+						<!--Grid column-->
+						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:white;">POPULAR LOCATIONS</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Vadodara</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Surat</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Ahmedabad</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Rajkot</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:white;">Get in Touch With Us</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">1800-123-1104</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">+91-2668-260201</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">admissions@paruluniversity.ac.in</a>
+								</li>
+
+							</ul>
+						</div>
+						<!--Grid column-->
+						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:white;">Social</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">Facebook</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Twitter</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Instagram</a>
+								</li>
+
+							</ul>
+						</div>
+
+						<!--Grid column-->
+						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:white;">Registered Office Address:</h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">River-view heights</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Vrundavan Chawkdi</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Waghodia Road-390010</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">Vadodara Gujarat</a>
+								</li>
+							</ul>
+						</div>
+						<!--Grid column-->
+
+						<!--Grid column-->
+
+						<!--Grid column-->
+					</div>
+					<!--Grid row-->
+				</section>
+				<!-- Section: Links -->
+			</div>
+			<!-- Grid container -->
+
+			<!-- Copyright -->
+			<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+				© 2021 Copyright:
+				<a class="text-white" href="https://mdbootstrap.com/">© 2021 book-kart-vh.herokuapp.com
+				</a>
+			</div>
+			<!-- Copyright -->
+		</footer>
+	</div>
+	</div>
+
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<script src="{% static 'styles/popper.js' %}"></script>
+	<script src="{% static 'styles/bootstrap.min.js' %}"></script>
+	<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+	<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+	<script src="{% static 'plugins/easing/easing.js' %}"></script>
+	<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
 </body>
+
+</html>
