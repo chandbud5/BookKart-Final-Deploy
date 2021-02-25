@@ -339,7 +339,63 @@
 									<li><a href="/about/">About us</a></li>
 									<li><a href="#contactpart">Contact</a></li>
 									{% if user.is_authenticated %}
-										<li><a href="/sell/" class="btn">Sell</a></li>
+
+									<li><div class="dropdown1">
+										<button class="dropbtn1">Sell</button>
+										<div class="dropdown-content1">
+											<!-- <select name = "category"> -->
+											<a href="/sell/">Sell Book</a>
+											<a href="/sell_b/">Sell Product</a>
+
+											<!-- </select> -->
+										</div>
+									</div>
+
+									<style>
+										.dropbtn1 {
+											border: 2px solid white;
+											border-radius: 5px;
+											padding: 5px 20px;
+											background-color:#D52C08;
+											margin-top: 0px;
+											color:white;
+										}
+
+										.dropdown1 {
+											position: relative;
+											display: inline-block;
+										}
+
+										.dropdown-content1 {
+											display: none;
+											position: absolute;
+											background-color: #f9f9f9;
+											min-width: 160px;
+											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+											z-index: 1;
+											background-color: #3b3b3b;
+										}
+
+										.dropdown-content1 a {
+											color: black;
+											padding: 12px 16px;
+											text-decoration: none;
+											display: block;
+										}
+
+										.dropdown-content1 a:hover {background-color: #f1f1f1}
+
+										.dropdown1:hover .dropdown-content1 {
+											display: block;
+										}
+
+										.dropdown:hover .dropbtn {
+											background-color: #3e8e41;
+										}
+										</style></li>
+
+										<!-- <li><a href="/sell/">Sell Product</a></li>
+										<li><a href="/sell_b/">Sell Book</a></li> -->
 										<li><a href="/logout/" class="btn">LogOut</a></li>
 									{% else %}
 										<li><a href="/register/" class="btn">Register</a></li>
@@ -833,7 +889,7 @@ Slide -->
 							<!--Grid column-->
 							<div class="col-auto">
 								<p class="pt-2">
-									<strong style="color:rgb(235, 188, 188);">Sign up for our newsletter</strong>
+									<strong style="color:rgb(10, 162, 233);">Sign up for our newsletter</strong>
 
 								</p>
 							</div>
@@ -878,7 +934,26 @@ Slide -->
 					<div class="row">
 						<!--Grid column-->
 						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">POPULAR LOCATIONS</h5>
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Our services  <hr></h5>
+
+							<ul class="list-unstyled mb-0">
+								<li>
+									<a href="#!" class="text-white">We are provide   </a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">plateform for buying</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">and selling or donate</a>
+								</li>
+								<li>
+									<a href="#!" class="text-white">books and Stationary.</a>
+								</li>
+
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">POPULAR LOCATIONS <hr></h5>
 
 							<ul class="list-unstyled mb-0">
 								<li>
@@ -899,42 +974,27 @@ Slide -->
 
 						<!--Grid column-->
 						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Get in Touch With Us</h5>
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Get in Touch With Us <hr></h5>
 
 							<ul class="list-unstyled mb-0">
 								<li>
-									<a href="#!" class="text-white">1800-123-1104</a>
+									<a href="#!" class="text-white">7874880847</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">+91-2668-260201</a>
+									<a href="#!" class="text-white">+91-2146-260201</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">admissions@paruluniversity.ac.in</a>
+									<a href="#!" class="text-white">book.kart01@gmail.com</a>
 								</li>
 
 							</ul>
 						</div>
 						<!--Grid column-->
-						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Social</h5>
-
-							<ul class="list-unstyled mb-0">
-								<li>
-									<a href="#!" class="text-white">Facebook</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Twitter</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Instagram</a>
-								</li>
-
-							</ul>
-						</div>
+						
 
 						<!--Grid column-->
 						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Registered Office Address:</h5>
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Registered Office Address: <hr></h5>
 
 							<ul class="list-unstyled mb-0">
 								<li>
@@ -951,6 +1011,11 @@ Slide -->
 								</li>
 							</ul>
 						</div>
+						<style>
+							.text-white{
+								font-size: 12px;
+							}
+						</style>
 						<!--Grid column-->
 
 						<!--Grid column-->
