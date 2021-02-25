@@ -18,6 +18,9 @@ def about(request):
 def prod(request):
 	return render(request, 'product.html')
 
+def search(request):
+	return render(request, 'search.html')
+
 def login(request):
 	return render(request, 'login.html')
 
@@ -34,10 +37,10 @@ def signup(request):
 		re_pwd = request.POST.get('re_pass')
 
 		already = User.objects.filter(email = e_mail).exists()
-		if not already:	
+		if not already:
 			bool_incorrect = False
 			if pwd==re_pwd:
-				user = User.objects.create_user(username=uname, password=pwd, email=e_mail, 
+				user = User.objects.create_user(username=uname, password=pwd, email=e_mail,
 					first_name=fname, last_name=lname)
 				user.save()
 				messages.info(request, "Registration Successful please login")
@@ -51,7 +54,7 @@ def signup(request):
 			return redirect('/login')
 
 def authenticate(request):
-	
+
 	if request.method == 'POST':
 		uname =  request.POST.get("uname")
 		pasw = request.POST.get("pass")
