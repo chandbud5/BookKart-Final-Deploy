@@ -16,7 +16,16 @@ def about(request):
     return render(request, 'about.html')
 
 def prod(request):
-	return render(request, 'product.html')
+	num = request.GET.get('id')
+	print(num)
+	obj = product.objects.get(id = num)
+	return render(request, 'product.html', {'book_obj': obj})
+
+def prod_b(request):
+	num = request.GET.get('id')
+	print(num)
+	obj = book.objects.get(id = num)
+	return render(request, 'product_b.html', {'book_obj': obj})
 
 def search(request):
 	return render(request, 'search.html')

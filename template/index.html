@@ -661,11 +661,11 @@
 						{% for b in books %}
 							<div class="destination item">
 								<div class="destination_image">
-									<img src="{{b.image.url}}" style="width: 150px;" alt="Book Image">
+									<a href="/prod/?id={{b.id}}"><img src="{{b.image.url}}" style="height: 200px;" alt="Book Image"></a>
 									<!-- <div class="spec_offer text-center"><a href="#">Special Offer</a></div> -->
 								</div>
 								<div class="destination_content">
-									<div class="destination_title"><a href="/prod/">{{b.Book_Name}}</a></div>
+									<div class="destination_title"><a href="/prod/?id={{b.id}}">{{b.Book_Name}}</a></div>
 									<div class="destination_subtitle">
 										<p>{{ b.Author }}</p>
 									</div>
@@ -686,7 +686,7 @@
 										}
 									</style>
 									<a href="#" class="button">Buy Now</a>
-									<button class="button">Book description</button>
+									<a href="/prod_b/?id={{b.id}}" class="button">Book Description</a>
 								</div>
 							</div>
 						{% endfor %}
@@ -734,7 +734,7 @@
 										}
 									</style>
 									<a href="#" class="button">Buy Now</a>
-									<button class="button">Book description</button>
+									<a href="/prod/?id={{b.id}}" class="button">Product Description</a>
 								</div>
 							</div>
 						{% endfor %}

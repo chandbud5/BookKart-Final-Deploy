@@ -423,7 +423,7 @@
 									}
 									</style> -->
 
-								<p class="pt-1"><b>Book Details</b><br>{{book_obj.Product_Description}}</p>
+								<p class="pt-1"><b>Book Details</b><br>{{book_obj.Book_Description}}</p>
 								<style>
 								p:last-of-type {
 								    margin-bottom: 0;
@@ -433,8 +433,12 @@
 									<table class="table table-sm table-borderless mb-0">
 										<tbody>
 											<tr>
-												<th class="pl-0 w-25" scope="row"><strong>Product Name</strong></th>
-												<td>{{ book_obj.Product_Name }}</td>
+												<th class="pl-0 w-25" scope="row"><strong>Book Name</strong></th>
+												<td>{{ book_obj.Book_Name }}</td>
+											</tr>
+											<tr>
+												<th class="pl-0 w-25" scope="row"><strong>Author Name</strong></th>
+												<td>{{ book_obj.Author }}</td>
 											</tr>
 											<tr>
 												<th class="pl-0 w-25" scope="row"><strong>Price</strong></th>
