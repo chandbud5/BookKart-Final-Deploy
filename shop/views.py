@@ -113,6 +113,12 @@ def sell(request):
 def sell_b(request):
 	return render(request, 'add_product_b.html')
 
+def verify(request):
+	return render(request, 'verify.html')
+
+def verify_b(request):
+	return render(request, 'verify_b.html')
+
 def add_product(request):
 	if request.method == 'POST':
 		bname = request.POST.get('bname')
