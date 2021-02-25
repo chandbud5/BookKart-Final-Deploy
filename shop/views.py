@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User, auth
 from django.db.models import Q
 from .models import product, book
+import time, os, random
+from twilio.rest import Client
 # Create your views here.
 
 def home(request):
@@ -48,6 +50,9 @@ def search(request):
 
 def login(request):
 	return render(request, 'login.html')
+
+def profile(request):
+	return render(request, 'profile.html')
 
 def register(request):
 	return render(request, 'registration.html')
@@ -119,7 +124,21 @@ def add_product(request):
 		item = request.POST.get('item')
 		e_mail = request.POST.get('email')
 		image = request.FILES['productimg']
+				
+		account_sid = 'AC23ed0a12c44791bf16cf0a02fcdc2efe'
+		auth_token = '4ffecb8caecb7df8110ff3c2b68fcc41'
+		client = Client(account_sid, auth_token)
+		print("Sending message")
 
+		otp = random.randint(1000,9999)
+		print(otp)
+		message = client.messages \
+		    .create(
+		         body='Your OTP for verification on BookKart is '+ str(otp),
+		         from_='+19285639513',
+		         to="+91"+phone)
+
+		print(message.sid)
 		if item == "Stationary Item":
 			prod = product.objects.create()
 			prod.Product_Name = bname
