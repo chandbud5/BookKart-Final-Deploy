@@ -36,8 +36,8 @@ def search(request):
 		empty = False
 		no_books = False
 		no_product = False
-		b_obj = book.objects.filter(Q(Book_Name__icontains=keyword) | Q(Author__icontains=keyword) | Q(Book_Description=keyword))
-		prod = product.objects.filter(Q(Product_Name__icontains=keyword) | Q(Product_Description__icontains=keyword))
+		b_obj = book.objects.filter(Q(Book_Name__icontains=keyword) | Q(Author__icontains=keyword) | Q(Book_Description=keyword)).order_by('-id')
+		prod = product.objects.filter(Q(Product_Name__icontains=keyword) | Q(Product_Description__icontains=keyword)).order_by('-id')
 		
 		if len(b_obj) == 0 and len(prod) == 0:
 			empty = True
