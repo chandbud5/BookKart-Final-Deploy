@@ -24,6 +24,17 @@
 	<body class="skin-light" style="padding-top: 120px;" aria-busy="true">
 
 	<head>
+		<style>
+			input[type=text] {
+			  width: 100%;
+			  padding: 12px 20px;
+			  margin: 8px 0;
+			  box-sizing: border-box;
+			  border: none;
+			  background-color: #E5E5E5;
+			  color: white;
+			}
+			</style>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="Travello template project">
@@ -344,7 +355,7 @@
 								  	<label for="bname">Product name:</label>
 								  	<input type="text" id="bname" name="bname" required><br><br>
 								  	<label for="bdesc">Product description:</label>
-									<textarea id="book-desc" name="bdesc" rows="4" cols="25" required>
+									<textarea id="book-desc"  wrap="off" cols="30" rows="5" required>
 									</textarea><br></br>
 									<!-- <label for="aname">Author name:</label> -->
 								  <!-- <input type="text" id="aname" name="aname"><br><br> -->
@@ -357,15 +368,15 @@
 										<option value = "Novel">Others</option>
 									</select><br></br> -->
 									<label for="price">Price :</label>
-								  <input type="Number" id="price" name="price" required><br><br>
+								  <input type="text" id="price" name="price" required><br><br>
 									<!-- <select name = "item">
 			    	        			<option value = "Book" selected>Book</option>
 				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br> -->
 									<label for="phone">Enter Mobile Number</label>
-									<input type="Number" id="phone" name="phone" required><br><br>
+									<input type="text" id="phone" name="phone" required><br><br>
 									<label for="email">Enter Email id:</label>
-									<input type="email" id="email" name="email" required><br><br>
+									<input type="text" id="email" name="email" required><br><br>
 									<p>Upload Your Product Photos</p>
 									<input type="file" id="myFile" name="productimg" required>
 									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
@@ -532,128 +543,157 @@
 
 
 			<!-- Footer -->
-			<footer class="page-footer font-small elegant-color">
+			<div id="contactpart">
+				<footer class="bg-dark text-center text-white">
+					<!-- Grid container -->
+					<div class="container p-4">
 
-				<div class="color-primary">
-					<div class="container">
+						<!-- Section: Form -->
+						<section class="">
+							<form action="">
+								<!--Grid row-->
+								<div class="row d-flex justify-content-center">
+									<!--Grid column-->
+									<div class="col-auto">
+										<p class="pt-2">
+											<!-- <strong style="color:rgb(235, 188, 188);">Sign up for our newsletter</strong> -->
 
-						<!-- Grid row-->
-						<div class="row py-4 d-flex align-items-center">
+										</p>
+									</div>
+									<!--Grid column-->
 
-						</div>
-						<!-- Grid row-->
+									<!--Grid column-->
+									<div class="col-md-5 col-12">
+										<!-- Email input -->
+										<div class="form-outline form-white mb-4">
+											<input type="email" id="form5Example2" class="form-control"
+												placeholder="Email address" />
+											<label class="form-label" for="form5Example2"></label>
+										</div>
+									</div>
+									<!--Grid column-->
 
+									<!--Grid column-->
+									<div class="col-auto">
+										<!-- Submit button -->
+										<button type="submit" class="btn btn-outline-light mb-4">
+											Subscribe
+										</button>
+									</div>
+									<!--Grid column-->
+								</div>
+								<!--Grid row-->
+							</form>
+						</section>
+						<!-- Section: Form -->
+
+						<!-- Section: Text -->
+						<section class="mb-4">
+							<p style="color:white;">
+								If having any quary please contact us.
+							</p>
+						</section>
+						<!-- Section: Text -->
+
+						<!-- Section: Links -->
+						<section class="">
+							<!--Grid row-->
+							<div class="row">
+								<!--Grid column-->
+								<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+									<h5 class="text-uppercase" style="color:white;">POPULAR LOCATIONS</h5>
+
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="#!" class="text-white">Vadodara</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Surat</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Ahmedabad</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Rajkot</a>
+										</li>
+									</ul>
+								</div>
+								<!--Grid column-->
+
+								<!--Grid column-->
+								<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+									<h5 class="text-uppercase" style="color:white;">Get in Touch With Us</h5>
+
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="#!" class="text-white">1800-123-1104</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">+91-2668-260201</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">admissions@paruluniversity.ac.in</a>
+										</li>
+
+									</ul>
+								</div>
+								<!--Grid column-->
+								<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+									<h5 class="text-uppercase" style="color:white;">Social</h5>
+
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="#!" class="text-white">Facebook</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Twitter</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Instagram</a>
+										</li>
+
+									</ul>
+								</div>
+
+								<!--Grid column-->
+								<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+									<h5 class="text-uppercase" style="color:white;">Registered Office Address:</h5>
+
+									<ul class="list-unstyled mb-0">
+										<li>
+											<a href="#!" class="text-white">River-view heights</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Vrundavan Chawkdi</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Waghodia Road-390010</a>
+										</li>
+										<li>
+											<a href="#!" class="text-white">Vadodara Gujarat</a>
+										</li>
+									</ul>
+								</div>
+								<!--Grid column-->
+
+								<!--Grid column-->
+
+								<!--Grid column-->
+							</div>
+							<!--Grid row-->
+						</section>
+						<!-- Section: Links -->
 					</div>
-				</div>
+					<!-- Grid container -->
 
-				<!-- Footer Links -->
-				<div class="container text-center text-md-left pt-4 pt-md-5">
-
-					<!-- Grid row -->
-					<div class="row mt-1 mt-md-0 mb-4 mb-md-0">
-
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-							<!-- Links -->
-							<h5>About me</h5>
-							<hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-							<p class="foot-desc mb-0">Here you can use rows and columns to organize your footer content. Lorem
-								ipsum dolor sit amet,
-								consectetur
-								adipisicing elit.</p>
-
-						</div>
-						<!-- Grid column -->
-
-						<hr class="clearfix w-100 d-md-none">
-
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-							<!-- Links -->
-							<h5>Products</h5>
-							<hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-							<ul class="list-unstyled foot-desc">
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">MDBootstrap</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">MDWordPress</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">BrandFlow</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">Bootstrap Angular</a>
-								</li>
-							</ul>
-
-						</div>
-						<!-- Grid column -->
-
-						<hr class="clearfix w-100 d-md-none">
-
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-							<!-- Links -->
-							<h5>Useful links</h5>
-							<hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-							<ul class="list-unstyled foot-desc">
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">Your Account</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">Become an Affiliate</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">Shipping Rates</a>
-								</li>
-								<li class="mb-2">
-									<a href="https://mdbootstrap.com/previews/ecommerce-demo/examples/pages/basic/product.html#!">Help</a>
-								</li>
-							</ul>
-
-						</div>
-						<!-- Grid column -->
-
-						<hr class="clearfix w-100 d-md-none">
-
-						<!-- Grid column -->
-						<div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-							<!-- Links -->
-							<h5>Contacts</h5>
-							<hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-							<ul class="fa-ul foot-desc ml-4">
-								<li class="mb-2"><span class="fa-li"><i class="far fa-map"></i></span>New York, Avenue Street 10
-								</li>
-								<li class="mb-2"><span class="fa-li"><i class="fas fa-phone-alt"></i></span>042 876 836 908</li>
-								<li class="mb-2"><span class="fa-li"><i class="far fa-envelope"></i></span>company@example.com</li>
-								<li><span class="fa-li"><i class="far fa-clock"></i></span>Monday - Friday: 10-17</li>
-							</ul>
-
-						</div>
-						<!-- Grid column -->
-
+					<!-- Copyright -->
+					<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+						© 2021 Copyright:
+						<a class="text-white" href="https://mdbootstrap.com/">© 2021 book-kart-vh.herokuapp.com
+						</a>
 					</div>
-					<!-- Grid row -->
-
-				</div>
-				<!-- Footer Links -->
-
-				<!-- Copyright -->
-				<div class="footer-copyright text-center py-3">© 2020 Copyright:
-					<a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-				</div>
-				<!-- Copyright -->
-
-			</footer>
+					<!-- Copyright -->
+				</footer>
 			<!-- Footer -->
 
 			<!-- SCRIPTS -->
