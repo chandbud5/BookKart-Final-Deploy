@@ -28,6 +28,8 @@ def prod_b(request):
 	return render(request, 'product_b.html', {'book_obj': obj})
 
 def search(request):
+	name = request.GET.get('name')
+	print(name)
 	return render(request, 'search.html')
 
 def login(request):
