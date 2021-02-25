@@ -21,5 +21,7 @@ urlpatterns = [
     path('add_product_b/', views.add_product_b, name="add_product_b"),
     path('verify/', views.verify, name="verify"),
     path('verify_b/', views.verify_b, name="verify_b"),
+    path('verification/', views.verification, name="verification"),
+    path('verification_b/', views.verification_b, name="verification_b"),
 ]
 urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -341,15 +341,15 @@
 		</div></div>
 							<div class="col-md-6">
 								<div class="table-responsive">
-
-
-								<form method="POST" action="/verification/" enctype="multipart/form-data">
+								<form method="POST" action="/verify/" enctype="multipart/form-data">
 									{% csrf_token %}
 								  	<h3>Enter Your Product Details</h3>
+								  	<input type="hidden" id="id" name="prod_id" value="{{product.id}}" required>
 								  	<label for="bname">Product name:</label>
-								  	<input type="text" id="bname" name="bname" required><br><br>
+								  	<input type="text" id="bname" value="{{product.Product_Name}}" name="bname" required><br><br>
 								  	<label for="bdesc">Product description:</label>
-									<textarea id="book-desc"  wrap="off" cols="30" rows="5" required>
+									<textarea id="book-desc" cols="30" rows="5" required>
+										{{product.Product_Description}}
 									</textarea><br></br>
 									<!-- <label for="aname">Author name:</label> -->
 								  <!-- <input type="text" id="aname" name="aname"><br><br> -->
@@ -362,17 +362,20 @@
 										<option value = "Novel">Others</option>
 									</select><br></br> -->
 									<label for="price">Price :</label>
-								  <input type="text" id="price" name="price" required><br><br>
+								  <input type="text" id="price" name="price" value="{{product.Price}}" required><br><br>
 									<!-- <select name = "item">
 			    	        			<option value = "Book" selected>Book</option>
 				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br> -->
 									<label for="phone">Enter Mobile Number</label>
-									<input type="text" id="phone" name="phone" required><br><br>
+									<input type="text" id="phone" name="phone" value="{{product.Seller_Phone}}" required><br><br>
 									<label for="email">Enter Email id:</label>
-									<input type="text" id="email" name="email" required><br><br>
+									<input type="text" id="email" name="email" value="{{product.Seller_Email}}" required><br><br>
 									<label for="phone">Enter OTP</label>
 									<input type="text" placeholder="Enter OTP" id="phone" name="otp" required><br><br>
+									{% for msg in messages %}
+										<p style="color: red">{{msg}}</p>
+									{% endfor %}
 									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
 							</div>

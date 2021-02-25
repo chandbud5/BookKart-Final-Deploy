@@ -52,7 +52,11 @@ def login(request):
 	return render(request, 'login.html')
 
 def profile(request):
-	return render(request, 'profile.html')
+	if request.user.is_authenticated:
+		e_mail = request.user.email
+		user_obj = User.objects.get(email=e_mail)
+		print(user_obj.email)
+		return render(request, 'profile.html', {'user': user_obj})
 
 def register(request):
 	return render(request, 'registration.html')
@@ -114,10 +118,46 @@ def sell_b(request):
 	return render(request, 'add_product_b.html')
 
 def verify(request):
-	return render(request, 'verify.html')
+	entered = request.POST.get('otp')
+	obj_id = request.POST.get('prod_id')
+	print(obj_id)
+	print(entered)
+	book_obj = product.objects.get(id = obj_id)
+	original = book_obj.otp
+	if original == int(entered):
+		book_obj.phone_verified = True
+		messages.info(request, "Phone verification Successful and Book added")
+		return redirect('/')
+	else:
+		messages.info(request, "Phone verification Unsuccessful Try Again")
+		return redirect('/verification/?id='+obj_id)
 
 def verify_b(request):
-	return render(request, 'verify_b.html')
+	entered = request.POST.get('otp')
+	obj_id = request.POST.get('book_id')
+	print(obj_id)
+	print(entered)
+	book_obj = book.objects.get(id = obj_id)
+	original = book_obj.otp
+	print(type(original))
+	print(type(entered))
+	if original == int(entered):
+		book_obj.phone_verified = True
+		messages.info(request, "Phone verification Successful and Book added")
+		return redirect('/')
+	else:
+		messages.info(request, "Phone verification Unsuccessful Try Again")
+		return redirect('/verification_b/?id='+obj_id)
+
+def verification(request):
+	obj_id = request.GET.get('id')
+	obj = product.objects.get(id = obj_id)
+	return render(request, 'verify.html', {'product':obj})
+
+def verification_b(request):
+	obj_id = request.GET.get('id')
+	obj = book.objects.get(id = obj_id)
+	return render(request, 'verify_b.html', {'book':obj})
 
 def add_product(request):
 	if request.method == 'POST':
@@ -145,35 +185,23 @@ def add_product(request):
 		         to="+91"+phone)
 
 		print(message.sid)
-		if item == "Stationary Item":
-			prod = product.objects.create()
-			prod.Product_Name = bname
-			prod.Product_Description = bdesc
-			prod.Price = price
-			prod.Seller_Name = request.user.first_name + " " + request.user.last_name
-			prod.Seller_Email = e_mail
-			prod.Seller_Phone = phone
-			prod.image = image
-			prod.save()
-			return redirect('/')
-		else:
-			b = book.objects.create()
-			b.Book_Name = bname
-			b.Book_Description = bdesc
-			b.Author = aname
-			b.Category = category
-			b.Price = price
-			b.Seller_Name = request.user.first_name + " " + request.user.last_name
-			b.Seller_Email = e_mail
-			b.Seller_Phone = phone
-			b.image = image
-			b.save()
-			return redirect('/')
+		prod = product.objects.create()
+		prod.Product_Name = bname
+		prod.Product_Description = bdesc
+		prod.Price = price
+		prod.Seller_Name = request.user.first_name + " " + request.user.last_name
+		prod.Seller_Email = e_mail
+		prod.Seller_Phone = phone
+		prod.image = image
+		prod.otp = otp
+		prod.save()
+		return redirect('/verification/?id='+str(prod.id))
 	else:
 		return redirect('/sell/')
 
 def add_product_b(request):
 	if request.method == 'POST':
+
 		bname = request.POST.get('bname')
 		bdesc = request.POST.get('bdesc')
 		aname = request.POST.get('aname')
@@ -184,29 +212,35 @@ def add_product_b(request):
 		e_mail = request.POST.get('email')
 		image = request.FILES['productimg']
 
-		if item == "Stationary Item":
-			prod = product.objects.create()
-			prod.Product_Name = bname
-			prod.Product_Description = bdesc
-			prod.Price = price
-			prod.Seller_Name = request.user.first_name + " " + request.user.last_name
-			prod.Seller_Email = e_mail
-			prod.Seller_Phone = phone
-			prod.image = image
-			prod.save()
-			return redirect('/')
-		else:
-			b = book.objects.create()
-			b.Book_Name = bname
-			b.Book_Description = bdesc
-			b.Author = aname
-			b.Category = category
-			b.Price = price
-			b.Seller_Name = request.user.first_name + " " + request.user.last_name
-			b.Seller_Email = e_mail
-			b.Seller_Phone = phone
-			b.image = image
-			b.save()
-			return redirect('/')
+				
+		account_sid = 'AC23ed0a12c44791bf16cf0a02fcdc2efe'
+		auth_token = '4ffecb8caecb7df8110ff3c2b68fcc41'
+		client = Client(account_sid, auth_token)
+		print("Sending message")
+
+		otp = random.randint(1000,9999)
+		print(otp)
+		message = client.messages \
+		    .create(
+		         body='Your OTP for verification on BookKart is '+ str(otp),
+		         from_='+19285639513',
+		         to="+91"+phone)
+
+		print(message.sid)
+
+
+		b = book.objects.create()
+		b.Book_Name = bname
+		b.Book_Description = bdesc
+		b.Author = aname
+		b.Category = category
+		b.Price = price
+		b.Seller_Name = request.user.first_name + " " + request.user.last_name
+		b.Seller_Email = e_mail
+		b.Seller_Phone = phone
+		b.otp = otp
+		b.image = image
+		b.save()
+		return redirect('/verification_b/?id='+str(b.id))
 	else:
 		return redirect('/sell_b/')

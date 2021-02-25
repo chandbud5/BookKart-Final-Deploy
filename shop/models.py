@@ -12,6 +12,8 @@ class book(models.Model):
 	Seller_Name = models.CharField(max_length=100)
 	Seller_Email = models.EmailField()
 	Seller_Phone = models.IntegerField()
+	otp = models.IntegerField()
+	phone_verified = models.BooleanField(default="False")
 	sold = models.BooleanField(default="False")
 	
 class product(models.Model):
@@ -22,4 +24,6 @@ class product(models.Model):
 	Seller_Name = models.CharField(max_length=100)
 	Seller_Email = models.EmailField()
 	Seller_Phone = models.IntegerField()
+	otp = models.IntegerField()
+	phone_verified = models.BooleanField(default="False")
 	sold = models.BooleanField(default="False")

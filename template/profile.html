@@ -12,7 +12,7 @@
     <meta name="author" content="Colorlib">
     <meta name="keywords" content="Colorlib Templates">
 
-    <title>profile</title>
+    <title>Profile</title>
 
     <link href="{% static 'profile/material-design-iconic-font.min.css' %}" rel="stylesheet" media="all">
     <link href="{% static 'profile/font-awesome.min.css" rel="stylesheet' %}" media="all">
@@ -47,7 +47,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Book-Kart | Home</title>
     <link rel="stylesheet" href="{% static 'assets/10004656050d5e32fb37f87e704beba6.css' %}" data-minify="1">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="/">
@@ -351,9 +350,8 @@
                                             class="img-rounded img-responsive" />
                                     </div>
                                     <div class="col-sm-6 col-md-8">
-                                        <h4>
-                                            Bhaumik Patel</h4>
-                                        <small><cite title="San Francisco, USA">San Francisco, USA <i
+                                        <h4>{{user.first_name}} {{user.last_name}}</h4>
+                                        <small><!-- <cite title="San Francisco, USA">San Francisco, USA <i
                                                     class="glyphicon glyphicon-map-marker">
                                                     <style>
                                                         body {
@@ -372,17 +370,17 @@
                                                         }
                                                     </style>
 
-                                                </i></cite></small>
+                                                </i></cite> --></small>
                                         <p>
-                                            <i class="glyphicon glyphicon-envelope"></i>email@example.com
+                                            <i class="glyphicon glyphicon-envelope"></i>{{user.email}}
                                             <br />
-                                            <i class="glyphicon glyphicon-globe"></i><a
+<!--                                             <i class="glyphicon glyphicon-globe"></i><a
                                                 href="http://www.jquery2dotnet.com">www.jquery2dotnet.com</a>
-                                            <br />
-                                            <i class="glyphicon glyphicon-gift"></i>June 02, 1988
-                                        </p>
+                                            <br /> -->
+<!--                                             <i class="glyphicon glyphicon-gift"></i>June 02, 1988
+                                        </p> -->
                                         <!-- Split button -->
-                                        <div class="btn-group">
+                                        <!-- <div class="btn-group">
                                             <button type="button" class="btn btn-primary">
                                                 Social</button>
                                             <button type="button" class="btn btn-primary dropdown-toggle"
@@ -397,7 +395,7 @@
                                                 <li class="divider"></li>
                                                 <li><a href="#">Github</a></li>
                                             </ul>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -436,13 +434,13 @@
                                 <div class="row row-space">
                                     <div class="col-200">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name">
+                                            <input class="input--style-5" value="{{user.first_name}}" type="text" name="first_name">
                                             <label class="label--desc">first name</label>
                                         </div>
                                     </div>
                                     <div class="col-200">
                                         <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name">
+                                            <input class="input--style-5" value="{{user.last_name}}" type="text" name="last_name">
                                             <label class="label--desc">last name</label>
                                         </div>
                                     </div>
@@ -471,31 +469,20 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="email" name="email">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row m-b-55">
-                            <div class="name">Phone</div>
-                            <div class="value">
-                                <div class="row row-refine">
-                                    <div class="col-3">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="area_code">
-                                            <label class="label--desc">Area Code</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="phone">
-                                            <label class="label--desc">Phone Number</label>
-                                        </div>
-                                    </div>
+                                    <input class="input--style-5" type="email" value="{{user.email}}" name="email">
                                 </div>
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Subject</div>
+                            <div class="name">Phone</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" value="" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <!-- <div class="name">Subject</div>
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
@@ -506,7 +493,7 @@
                                             <option>Subject 2</option>
                                             <option>Subject 3</option>
                                         </select>
-                                        <!-- <span class="select2 select2-container select2-container--default"
+                                        <span class="select2 select2-container select2-container--default"
                                             dir="ltr" style="width: 110px;"><span class="selection"><span
                                                     class="select2-selection select2-selection--single" role="combobox"
                                                     aria-haspopup="true" aria-expanded="false" tabindex="0"
@@ -517,11 +504,11 @@
                                                         role="presentation"><b
                                                             role="presentation"></b></span></span></span><span
                                                 class="dropdown-wrapper" aria-hidden="true"></span>
-                                            </span> -->
+                                            </span>
                                         <div class="select-dropdown"></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="form-row p-t-20">
 

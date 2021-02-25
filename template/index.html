@@ -137,6 +137,9 @@
 		<div class="tb-preloader-in" style="display: none;"><img src="{% static 'img/logo3.PNG' %}" alt="loader-logo">
 		</div>
 	</div>
+	{% for msg in messages %}
+		<p style="color: green">{{msg}}</p>
+	{% endfor %}
 	<!-- <div class="tb-solid-header-height" style="height: 0px;"></div> -->
 	<!-- <header
 		class="tb-site-header tb-default-width tb-style1 tb-sticky-header tb-solid-header tb-color1 tb-header-border1">

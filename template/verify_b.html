@@ -599,13 +599,15 @@
 
 
 
-								<form method="POST" action="/verification/" enctype="multipart/form-data">
+								<form method="POST" action="/verify_b/" enctype="multipart/form-data">
 									{% csrf_token %}
 								  	<h3>Enter Your Book Details</h3>
+								  	<input type="hidden" id="id" name="book_id" value="{{book.id}}" required>
 								  	<label for="bname">Book name:</label>
-								  	<input type="text" id="bname" name="bname" required><br><br>
+								  	<input type="text" id="bname" name="bname" value="{{book.Book_Name}}" required><br><br>
 								  	<label for="bdesc">Book description:</label>
-									<textarea id="book-desc" wrap="off" cols="30" rows="5" required>
+									<textarea id="book-desc" cols="30" rows="5" required>
+									{{book.Book_Description}}
 									</textarea>
 									<!-- <label for="aname">Author name:</label>
 								  <input type="text" id="aname" name="aname" required><br><br> -->
@@ -618,17 +620,20 @@
 										<option value = "Novel">Novels</option>
 									</select><br></br>
 									<label for="text">Price :</label>
-								  <input type="text" id="price" name="price" required><br><br>
+								  <input type="text" id="price" name="price" value="{{book.Price}}" required><br><br>
 									<!-- <select name = "item">
 			    	        			<option value = "Book" selected>Book</option>
 				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br> -->
 									<label for="phone">Enter Mobile Number</label>
-									<input type="text" id="phone" name="phone" required><br><br>
+									<input type="text" id="phone" name="phone" value="{{book.Seller_Phone}}" required><br><br>
 									<label for="email">Enter Email id:</label>
-									<input type="text" id="email" name="email" required><br><br>
+									<input type="text" id="email" name="email" value="{{book.Seller_Email}}" required><br><br>
 									<label for="otp">Enter OTP</label>
-									<input type="text" id="phone" name="otp" required><br><br>
+									<input type="text" id="otp" name="otp" required><br><br>
+									{% for msg in messages %}
+										<p style="color: red">{{msg}}</p>
+									{% endfor %}
 									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
 							</div>
