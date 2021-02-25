@@ -534,9 +534,13 @@
 							<form action="/search/" class="home_search_form" id="home_search_form">
 								<div
 									class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<input type="text" class="search_input search_input_1" placeholder="Book name">
+									<input type="text" class="search_input search_input_1" placeholder="Search for books and products">
+									<style>
+									.search_input{
+												    width: 50%;
+												}</style>
 										<!-- <p>Or</p> -->
-									<input type="text" class="search_input search_input_3" placeholder="Author name">
+									<!-- <input type="text" class="search_input search_input_3" placeholder="Author name"> -->
 
 										<div class="dropdown">
 										  <button class="dropbtn">Catagories</button>
@@ -553,12 +557,18 @@
 
 										<style>
 											.dropbtn {
-											  background-color: #111111;
-											  color: white;
-											  padding: 16px;
-											  font-size: 16px;
-											  border: none;
-											  cursor: pointer;
+												width: 161px;
+												height: 52px;
+												background: #181818;
+												color: #FFFFFF;
+												font-family: 'Oswald', sans-serif;
+												font-size: 16px;
+												font-weight: 400;
+												text-transform: uppercase;
+												border-radius: 0px;
+												border: none;
+												outline: none;
+												cursor: pointer;
 											}
 
 											.dropdown {
