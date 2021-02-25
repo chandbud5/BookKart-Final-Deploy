@@ -534,19 +534,19 @@
 							<form action="/search/" class="home_search_form" id="home_search_form">
 								<div
 									class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
-									<input type="text" class="search_input search_input_1" placeholder="Book name">
+									<input type="text" name="query" class="search_input search_input_1" placeholder="Book name">
 										<!-- <p>Or</p> -->
-									<input type="text" class="search_input search_input_3" placeholder="Author name">
+									<!-- <input type="text" name="aname" class="search_input search_input_2" placeholder="Author name"> -->
 
 										<div class="dropdown">
 										  <button class="dropbtn">Catagories</button>
 										  <div class="dropdown-content">
 												<!-- <select name = "category"> -->
-												<a href="#">Engineering</a>
-												<a href="#">Medical</a>
-												<a href="#">Law</a>
-												<a href="#">Civil services</a>
-												<a href="#">Novels</a>
+												<a href="/search/?query=engg">Engineering</a>
+												<a href="/search/?query=medical">Medical</a>
+												<!-- <a href="/search/?query=law">Law</a> -->
+												<a href="/search/?query=services">Civil services</a>
+												<a href="/search/?query=novel">Novels</a>
 												<!-- </select> -->
 										  </div>
 										</div>
@@ -658,7 +658,6 @@
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						<!-- Destination -->
 						{% for b in books %}
 							<div class="destination item">
 								<div class="destination_image">

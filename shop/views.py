@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User, auth
+from django.db.models import Q
 from .models import product, book
 # Create your views here.
 
@@ -28,9 +29,22 @@ def prod_b(request):
 	return render(request, 'product_b.html', {'book_obj': obj})
 
 def search(request):
-	name = request.GET.get('name')
-	print(name)
-	return render(request, 'search.html')
+	keyword = request.GET.get('query')
+	print(keyword)
+
+	if keyword != "":
+		empty = False
+		no_books = False
+		no_product = False
+		b_obj = book.objects.filter(Q(Book_Name__icontains=keyword) | Q(Author__icontains=keyword) | Q(Book_Description=keyword))
+		prod = product.objects.filter(Q(Product_Name__icontains=keyword) | Q(Product_Description__icontains=keyword))
+		
+		if len(b_obj) == 0 and len(prod) == 0:
+			empty = True
+		return render(request, 'search.html', {'book_obj':b_obj, 'product':prod, 'empty':empty})
+	else:
+		messages.info(request, "alert()")
+		return redirect('/')
 
 def login(request):
 	return render(request, 'login.html')
