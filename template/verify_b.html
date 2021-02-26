@@ -32,7 +32,7 @@
 			  box-sizing: border-box;
 			  border: none;
 			  background-color: #E5E5E5;
-			  color: white;
+			  color: black;
 			}
 			input[type=text]{
 				border-style: solid;
@@ -361,7 +361,60 @@
  	                   <li><a href="/about/">About us</a></li>
  	                   <li><a href="#">Contact</a></li>
  	                   {% if user.is_authenticated %}
- 	                     <li><a href="/add_product/" class="btn">Sell</a></li>
+										 <li><div class="dropdown1">
+											<button class="dropbtn1">Sell</button>
+											<div class="dropdown-content1">
+												<!-- <select name = "category"> -->
+												<a href="/sell_b/">Sell Book</a>
+												<a href="/sell/">Sell Product</a>
+
+												<!-- </select> -->
+											</div>
+										</div>
+
+										<style>
+											.dropbtn1 {
+												border: 2px solid white;
+												border-radius: 5px;
+												padding: 11px 28px;
+												background-color:#D52C08;
+												margin-top: 0px;
+												color:white;
+											}
+
+											.dropdown1 {
+												position: relative;
+												display: inline-block;
+											}
+
+											.dropdown-content1 {
+												display: none;
+												position: absolute;
+												background-color: #f9f9f9;
+												min-width: 160px;
+												box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+												z-index: 1;
+												background-color: #3b3b3b;
+											}
+
+											.dropdown-content1 a {
+												color: black;
+												padding: 12px 16px;
+												text-decoration: none;
+												display: block;
+											}
+
+											.dropdown-content1 a:hover {background-color: #3e8e41}
+
+											.dropdown1:hover .dropdown-content1 {
+												display: block;
+											}
+
+											.dropdown:hover .dropbtn {
+												background-color: #3e8e41;
+											}
+											</style></li>
+
  	                     <li><a href="/logout/" class="btn">LogOut</a></li>
  	                   {% else %}
  	                     <li><a href="/register/" class="btn">Register</a></li>
@@ -604,11 +657,18 @@
 								  	<h3>Enter Your Book Details</h3>
 								  	<input type="hidden" id="id" name="book_id" value="{{book.id}}" required>
 								  	<label for="bname">Book name:</label>
+<<<<<<< HEAD
 								  	<input type="text" id="bname" name="bname" value="{{book.Book_Name}}" required><br><br>
 								  	<label for="bdesc">Book description:</label>
 									<textarea id="book-desc" cols="30" rows="5" required>
 									{{book.Book_Description}}
 									</textarea>
+=======
+								  	<input type="text" id="bname" name="bname" placeholder="Book Name" required><br><br>
+								  	<label for="bdesc">Book description:</label>
+									<textarea id="book-desc" wrap="off" cols="30" rows="5" required>
+									</textarea><br></br>
+>>>>>>> 36da3df54ec3f16be7e9ef0845ad81e6ccd86a31
 									<!-- <label for="aname">Author name:</label>
 								  <input type="text" id="aname" name="aname" required><br><br> -->
 									<label for="catagory">Select catagory</label>
@@ -620,12 +680,17 @@
 										<option value = "Novel">Novels</option>
 									</select><br></br>
 									<label for="text">Price :</label>
+<<<<<<< HEAD
 								  <input type="text" id="price" name="price" value="{{book.Price}}" required><br><br>
+=======
+								  <input type="text" id="price" name="price" placeholder="Price" required><br><br>
+>>>>>>> 36da3df54ec3f16be7e9ef0845ad81e6ccd86a31
 									<!-- <select name = "item">
 			    	        			<option value = "Book" selected>Book</option>
 				            			<option value = "Stationary Item">Stationary Item</option>
 									</select><br></br> -->
 									<label for="phone">Enter Mobile Number</label>
+<<<<<<< HEAD
 									<input type="text" id="phone" name="phone" value="{{book.Seller_Phone}}" required><br><br>
 									<label for="email">Enter Email id:</label>
 									<input type="text" id="email" name="email" value="{{book.Seller_Email}}" required><br><br>
@@ -634,6 +699,13 @@
 									{% for msg in messages %}
 										<p style="color: red">{{msg}}</p>
 									{% endfor %}
+=======
+									<input type="text" id="phone" name="phone" placeholder="Enter Mobile Number" required><br><br>
+									<label for="email">Enter Email id:</label>
+									<input type="text" id="email" name="email" placeholder="Enter your Email id" required><br><br>
+									<label for="otp">Enter OTP</label>
+									<input type="text" id="phone" name="otp" placeholder="Enter OTP" required><br><br>
+>>>>>>> 36da3df54ec3f16be7e9ef0845ad81e6ccd86a31
 									<input type="submit" name="submit" class="btn btn-primary btn-md mr-1 mb-2 waves-effect waves-light" style="margin: 5px;">
 								</form>
 							</div>

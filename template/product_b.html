@@ -192,7 +192,60 @@
 		                  <li><a href="/about/">About us</a></li>
 		                  <li><a href="#">Contact</a></li>
 		                  {% if user.is_authenticated %}
-		                    <li><a href="/add_product/" class="btn">Sell</a></li>
+		                    <!-- <li><a href="/add_product/" class="btn">Sell</a></li> -->
+												<li><div class="dropdown1">
+													<button class="dropbtn1">Sell</button>
+													<div class="dropdown-content1">
+														<!-- <select name = "category"> -->
+														<a href="/sell_b/">Sell Book</a>
+														<a href="/sell/">Sell Product</a>
+
+														<!-- </select> -->
+													</div>
+												</div>
+
+												<style>
+													.dropbtn1 {
+														border: 2px solid white;
+														border-radius: 5px;
+														padding: 11px 28px;
+														background-color:#D52C08;
+														margin-top: 0px;
+														color:white;
+													}
+
+													.dropdown1 {
+														position: relative;
+														display: inline-block;
+													}
+
+													.dropdown-content1 {
+														display: none;
+														position: absolute;
+														background-color: #f9f9f9;
+														min-width: 160px;
+														box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+														z-index: 1;
+														background-color: #3b3b3b;
+													}
+
+													.dropdown-content1 a {
+														color: black;
+														padding: 12px 16px;
+														text-decoration: none;
+														display: block;
+													}
+
+													.dropdown-content1 a:hover {background-color: #3e8e41}
+
+													.dropdown1:hover .dropdown-content1 {
+														display: block;
+													}
+
+													.dropdown:hover .dropbtn {
+														background-color: #3e8e41;
+													}
+													</style></li>
 		                    <li><a href="/logout/" class="btn">LogOut</a></li>
 		                  {% else %}
 		                    <li><a href="/register/" class="btn">Register</a></li>
