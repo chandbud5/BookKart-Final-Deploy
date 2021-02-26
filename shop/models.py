@@ -27,3 +27,9 @@ class product(models.Model):
 	otp = models.IntegerField()
 	phone_verified = models.BooleanField(default="False")
 	sold = models.BooleanField(default="False")
+
+class Payment_User(models.Model):
+	Name = models.CharField(max_length=100, default="")
+	Phone = models.IntegerField(default="")
+	UPI_ID = models.CharField(max_length=100, default="")
+	Email = models.EmailField(default="")
