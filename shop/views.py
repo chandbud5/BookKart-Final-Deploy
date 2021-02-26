@@ -244,3 +244,21 @@ def add_product_b(request):
 		return redirect('/verification_b/?id='+str(b.id))
 	else:
 		return redirect('/sell_b/')
+
+def update_user(request):
+	if request.method=='POST':
+		fname = request.POST.get('first_name')
+		lname = request.POST.get('last_name')
+		uname = request.POST.get('uname')
+		e_mail = request.POST.get('email')
+		print(e_mail)
+		person = User.objects.get(email = e_mail)
+		person.first_name = fname
+		person.last_name = lname
+		person.username = uname
+		person.email = e_mail
+		person.save()
+		return redirect('/profile/')
+
+	else:
+		return redirect('/profile/')

@@ -23,5 +23,6 @@ urlpatterns = [
     path('verify_b/', views.verify_b, name="verify_b"),
     path('verification/', views.verification, name="verification"),
     path('verification_b/', views.verification_b, name="verification_b"),
+    path('update-user/', views.update_user, name="update_user"),
 ]
 urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
