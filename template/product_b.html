@@ -600,8 +600,18 @@
 									}
 								</style>
 								<div class="table-responsive">
+										{% if book_obj.phone_verified %}
+										<a class="tb-custom-logo-link1"><img src="https://th.bing.com/th/id/OIP.lPVDB500xQi-bzApvMgYEAHaHu?w=200&h=209&c=7&o=5&dpr=1.25&pid=1.7" alt="logo" class="tb-custom-logo1"></a></div>
+										{% else %}
+										{% endif %}
 									<table class="table table-sm table-borderless mb-0">
 										<tbody>
+											{% if book_obj.phone_verified %}
+											<tr>
+												<th class="pl-0 w-25" scope="row"><strong>Verified Seller</strong></th>
+											</tr>
+											{% else %}
+											{% endif %}
 											<tr>
 												<th class="pl-0 w-25" scope="row"><strong>Seller Name</strong></th>
 												<td>{{ book_obj.Seller_Name }}</td>

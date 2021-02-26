@@ -143,6 +143,7 @@ def verify_b(request):
 	print(type(entered))
 	if original == int(entered):
 		book_obj.phone_verified = True
+		book_obj.save()
 		messages.info(request, "Phone verification Successful and Book added")
 		return redirect('/')
 	else:
@@ -250,7 +251,7 @@ def update_user(request):
 		fname = request.POST.get('first_name')
 		lname = request.POST.get('last_name')
 		uname = request.POST.get('uname')
-		e_mail = request.POST.get('email')
+		e_mail = request.user.email
 		print(e_mail)
 		person = User.objects.get(email = e_mail)
 		person.first_name = fname
