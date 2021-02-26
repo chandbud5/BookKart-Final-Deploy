@@ -179,184 +179,232 @@
 			<div class="tb-preloader-in" style="display: none;"><img src="{% static 'img/logo3.PNG' %}"
 					alt="loader-logo"></div>
 		</div>
-		<header class="header">
-			<div class="container" style="background-color: #808080">
-				<div class="row">
-					<div class="col">
-						<div class="header_content d-flex flex-row align-items-center justify-content-start">
-							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
-
-								<!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
-								<div class="tb-site-branding"> <a href="/" class="tb-custom-logo-link"><img
-											src="{% static 'img/logo3.PNG' %}" alt="logo" class="tb-custom-logo"></a>
-								</div>
-								<style>
-									.container {}
-
-									.tb-custom-logo {
-										max-height: 136px;
-									}
-
-									.tb-custom-logo-link img {
-										border: 0;
-										max-width: 100%;
-										height: 70px;
-										max-height: 100%;
-									}
-
-									.header_content {
-										width: 100%;
-										height: 88px;
-										-webkit-transition: all 200ms ease;
-										-moz-transition: all 200ms ease;
-										-ms-transition: all 200ms ease;
-										-o-transition: all 200ms ease;
-										transition: all 200ms ease;
-									}
-								</style>
-								<nav class="main_nav">
-									<ul class="d-flex flex-row align-items-start justify-content-start">
-										<li><a href="/">Home</a></li>
-										<li><a href="/about/">About us</a></li>
-										<li><a href="#">Contact</a></li>
-										{% if user.is_authenticated %}
-										<!-- <li><a href="/add_product/" class="btn">Sell</a></li> -->
-										<li><div class="dropdown1">
-											<button class="dropbtn1">Sell</button>
-											<div class="dropdown-content1">
-												<!-- <select name = "category"> -->
-												<a href="/sell_b/">Sell Book</a>
-												<a href="/sell/">Sell Product</a>
-
-												<!-- </select> -->
-											</div>
-										</div>
-
-										<style>
-											.dropbtn1 {
-												border: 2px solid white;
-												border-radius: 5px;
-												padding: 11px 28px;
-												background-color:#D52C08;
-												margin-top: 0px;
-												color:white;
-											}
-
-											.dropdown1 {
-												position: relative;
-												display: inline-block;
-											}
-
-											.dropdown-content1 {
-												display: none;
-												position: absolute;
-												background-color: #f9f9f9;
-												min-width: 160px;
-												box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-												z-index: 1;
-												background-color: #3b3b3b;
-											}
-
-											.dropdown-content1 a {
-												color: black;
-												padding: 12px 16px;
-												text-decoration: none;
-												display: block;
-											}
-
-											.dropdown-content1 a:hover {background-color: #3e8e41}
-
-											.dropdown1:hover .dropdown-content1 {
-												display: block;
-											}
-
-											.dropdown:hover .dropbtn {
-												background-color: #3e8e41;
-											}
-											</style></li>
-										<li><a href="/logout/" class="btn">LogOut</a></li>
-										{% else %}
-										<li><a href="/register/" class="btn">Register</a></li>
-										<li><a href="/login/" class="btn">Login</a></li>
-										{% endif %}
-										<style>
-											.btn {
-												/* margin: 20px 20px;
-		                      padding: 5px 20px; */
-												border: 2px solid white;
-												border-radius: 5px;
-												padding: 5px 20px;
-												background-color: #D52C08;
-												margin-top: 0px;
-
-											}
-
-											ul {
-												list-style-type: none;
-											}
-
-											/* .btn2{
-		                      margin: 20px 0px;
-		                      padding: 5px 20px;
-		                      border-radius: 5px;
-		                    } */
-										</style>
-
-									</ul>
-								</nav>
-
-								<!-- Hamburger -->
-
-								<div class="hamburger ml-auto">
-									<!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
-									<meta name="viewport" content="width=device-width, initial-scale=1">
-									<style>
-										.bar1,
-										.bar2,
-										.bar3 {
-											width: 35px;
-											height: 5px;
-											background-color: white;
-											margin: 6px 200px;
-											transition: 0.4s;
-										}
-
-										.change .bar1 {
-											-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-											transform: rotate(-45deg) translate(-9px, 6px);
-										}
-
-										.change .bar2 {
-											opacity: 0;
-										}
-
-										.change .bar3 {
-											-webkit-transform: rotate(45deg) translate(-8px, -8px);
-											transform: rotate(45deg) translate(-8px, -8px);
-										}
-									</style>
-									<!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
-									<div class="container" onclick="myFunction(this)">
-										<div class="bar1"></div>
-										<div class="bar2"></div>
-										<div class="bar3"></div>
-									</div>
-
-									<!-- <script>
-		                function myFunction(x) {
-		                  x.classList.toggle("change");
-		                }
-		              </script> -->
 
 
-								</div>
+		
+    <header class="header scrolled">
+        <style>
+            .header.scrolled {
+                background: rgba(24, 24, 24, 0.6);
+            }
 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 100;
+                -webkit-transition: all 200ms ease;
+                -moz-transition: all 200ms ease;
+                -ms-transition: all 200ms ease;
+                -o-transition: all 200ms ease;
+                transition: all 200ms ease;
+            }
+        </style>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="header_content d-flex flex-row align-items-center justify-content-start">
+                        <div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+                            <!-- <div class="logo"><a href="/">Book-Kart</a></div> -->
+                            <div class="tb-site-branding"> <a href="/"
+                                class="tb-custom-logo-link"><img src="{% static 'img/logo3.PNG' %}" alt="logo"
+                                    class="tb-custom-logo"></a></div>
+                        <style>
+                            .tb-custom-logo {
+                                max-height: 136px;
+                            }
+
+                            .tb-custom-logo-link img {
+                                border: 0;
+                                max-width: 100%;
+                                height: 70px;
+                                max-height: 100%;
+                            }
+                        </style>
+                            <nav class="main_nav">
+                                <ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/about/">About us</a></li>
+
+                                    <li><a href="#contactpart">Contact</a></li>
+                                    {% if user.is_authenticated %}
+                                    <li><div class="dropdown1">
+                  										<button class="dropbtn1">Sell</button>
+                  										<div class="dropdown-content1">
+                  											<!-- <select name = "category"> -->
+                  											<a href="/sell_b/">Sell Book</a>
+                  											<a href="/sell/">Sell Product</a>
+
+                  											<!-- </select> -->
+                  										</div>
+                  									</div>
+
+                  									<style>
+                  										.dropbtn1 {
+                  											border: 2px solid white;
+                  											border-radius: 5px;
+                  											padding: 5px 20px;
+                  											background-color:#D52C08;
+                  											margin-top: 0px;
+                  											color:white;
+                  										}
+
+                  										.dropdown1 {
+                  											position: relative;
+                  											display: inline-block;
+                  										}
+
+                  										.dropdown-content1 {
+                  											display: none;
+                  											position: absolute;
+                  											background-color: #f9f9f9;
+                  											min-width: 160px;
+                  											box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  											z-index: 1;
+                  											background-color: #3b3b3b;
+                  										}
+
+                  										.dropdown-content1 a {
+                  											color: black;
+                  											padding: 12px 16px;
+                  											text-decoration: none;
+                  											display: block;
+                  										}
+
+                  										.dropdown-content1 a:hover {background-color: #3e8e41}
+
+                  										.dropdown1:hover .dropdown-content1 {
+                  											display: block;
+                  										}
+
+                  										.dropdown:hover .dropbtn {
+                  											background-color: #3e8e41;
+                  										}
+                  										</style></li>
+                                        <!-- <li><a href="/sell/" class="btn">Sell</a></li> -->
+                                        <li><a href="/logout/" class="btn">LogOut</a></li>
+                                    {% else %}
+                                        <li><a href="/register/" class="btn">Register</a></li>
+                                        <li><a href="/login/" class="btn">Login</a></li>
+                                    {% endif %}
+                                    <style>
+
+                                        .btn {
+                                            /* margin: 20px 20px;
+                                                padding: 5px 20px; */
+                                            border: 2px solid white;
+                                            border-radius: 5px;
+                                            padding: 5px 20px;
+                                            background-color: #D52C08;
+                                            margin-top: 0px;
+
+                                        }
+
+                                        ul {
+                                            list-style-type: none;
+                                        }
+
+                                        /* .btn2{
+                                                margin: 20px 0px;
+                                                padding: 5px 20px;
+                                                border-radius: 5px;
+                                            } */
+                                    </style>
+
+                                </ul>
+                            </nav>
+
+                            <!-- Hamburger -->
+
+                            <div class="hamburger ml-auto">
+                                <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <style>
+                                    .bar1,
+                                    .bar2,
+                                    .bar3 {
+                                        width: 35px;
+                                        height: 5px;
+                                        background-color: white;
+                                        margin: 6px 200px;
+                                        transition: 0.4s;
+                                    }
+
+                                    .change .bar1 {
+                                        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+                                        transform: rotate(-45deg) translate(-9px, 6px);
+                                    }
+
+                                    .change .bar2 {
+                                        opacity: 0;
+                                    }
+
+                                    .change .bar3 {
+                                        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+                                        transform: rotate(45deg) translate(-8px, -8px);
+                                    }
+                                </style>
+                                <!-- <p>Click on the Menu Icon to transform it to "X":</p> -->
+                                <div class="container" onclick="myFunction(this)">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+
+                                <!-- <script>
+                                    function myFunction(x) {
+                                        x.classList.toggle("change");
+                                    }
+                                </script> -->
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="menu">
+        <div class="menu_header d-flex flex-row align-items-center justify-content-start">
+            <div class="menu_logo"><a href="/">Book-Kart</a></div>
+            <div class="menu_close_container ml-auto">
+                <div class="menu_close">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_content">
+            <ul>
+                <li><a href="inex.html">Home</a></li>
+                <li><a href="/about/">About us</a></li>
+                <li><a href="#contactpart">Contact</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/sell/">Sell</a></li>
+                    <li><a href="/logout/">Log Out</a></li>
+                {% else %}
+                    <li><a href="/register/">Register</a></li>
+                    <li><a href="/login/">Login</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="menu_social">
+            <div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+            <!-- <ul class="d-flex flex-row align-items-start justify-content-start">
+                        <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                    </ul> -->
+        </div>
+    </div>
 		<!-- <div class="tb-solid-header-height" style="height: 0px;"></div> -->
 
 
@@ -451,7 +499,7 @@
 
 								<div class="row product-gallery mx-1">
 
-<<<<<<< HEAD
+
 									<div class="col-12 mb-0">
 										<figure class="view overlay rounded z-depth-1 main-img"
 											style="max-height: 450px;" style="margin: 49px 20px;"
@@ -559,6 +607,28 @@
 										margin-top: 100px;
 									}
 								</style>
+
+								<div class="tb-site-branding">
+								<a class="tb-custom-logo-link1"><img src="https://th.bing.com/th/id/OIP.lPVDB500xQi-bzApvMgYEAHaHu?w=200&h=209&c=7&o=5&dpr=1.25&pid=1.7" alt="logo" class="tb-custom-logo1"></a></div>
+								<style>
+									.tb-custom-logo1 {
+										max-height: 136px;
+									}
+
+									.tb-custom-logo-link1 img {
+										border: 0;
+										max-width: 100%;
+										height: 70px;
+										max-height: 100%;
+									}
+								</style>
+
+								<tbody>
+									<tr>
+										<th class="pl-0 w-25" scope="row"><strong>Verify Seller</strong></th>
+									</tr>
+								</tbody>
+
 								<div class="table-responsive">
 									<table class="table table-sm table-borderless mb-0">
 										<tbody>
@@ -740,10 +810,10 @@
 						<div class="row d-flex justify-content-center">
 							<!--Grid column-->
 							<div class="col-auto">
-								<p class="pt-2">
-									<strong style="color:rgb(235, 188, 188);">Sign up for our newsletter</strong>
+								<div class="pt-2">
+									<strong style="color:rgb(10, 162, 233);">Sign up for our newsletter</strong>
 
-								</p>
+								</div>
 							</div>
 							<!--Grid column-->
 
@@ -774,9 +844,9 @@
 
 				<!-- Section: Text -->
 				<section class="mb-4">
-					<p style="color:white;">
+					<div style="color:white;">
 						If having any quary please contact us.
-					</p>
+					</div>
 				</section>
 				<!-- Section: Text -->
 
@@ -787,85 +857,96 @@
 					<div class="row">
 						<!--Grid column-->
 						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">POPULAR LOCATIONS</h5>
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Our services  <hr></h5>
 
 							<ul class="list-unstyled mb-0">
 								<li>
-									<a href="#!" class="text-white">Vadodara</a>
+									<a href="#!" class="text-white">We are provide   </a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">Surat</a>
+									<a href="#!" class="text-white">plateform for buying</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">Ahmedabad</a>
+									<a href="#!" class="text-white">and selling or donate</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">Rajkot</a>
+									<a href="#!" class="text-white">books and Stationary.</a>
 								</li>
-							</ul>
-						</div>
-						<!--Grid column-->
 
-						<!--Grid column-->
-						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Get in Touch With Us</h5>
+							</ul>
+                        </div>
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase" style="color:rgb(10, 162, 233);">POPULAR LOCATIONS <hr></h5>
+
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">Vadodara</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Surat</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Ahmedabad</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Rajkot</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+							<h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Get in Touch With Us <hr></h5>
 
 							<ul class="list-unstyled mb-0">
 								<li>
-									<a href="#!" class="text-white">1800-123-1104</a>
+									<a href="#!" class="text-white">7874880847</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">+91-2668-260201</a>
+									<a href="#!" class="text-white">+91-2146-260201</a>
 								</li>
 								<li>
-									<a href="#!" class="text-white">admissions@paruluniversity.ac.in</a>
+									<a href="#!" class="text-white">book.kart01@gmail.com</a>
 								</li>
 
 							</ul>
 						</div>
-						<!--Grid column-->
-						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Social</h5>
+                        <!--Grid column-->
 
-							<ul class="list-unstyled mb-0">
-								<li>
-									<a href="#!" class="text-white">Facebook</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Twitter</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Instagram</a>
-								</li>
 
-							</ul>
-						</div>
+                        <!--Grid column-->
+                        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <h5 class="text-uppercase" style="color:rgb(10, 162, 233);">Registered Office Address: <hr></h5>
 
-						<!--Grid column-->
-						<div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-							<h5 class="text-uppercase" style="color:white;">Registered Office Address:</h5>
-
-							<ul class="list-unstyled mb-0">
-								<li>
-									<a href="#!" class="text-white">River-view heights</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Vrundavan Chawkdi</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Waghodia Road-390010</a>
-								</li>
-								<li>
-									<a href="#!" class="text-white">Vadodara Gujarat</a>
-								</li>
-							</ul>
-						</div>
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#!" class="text-white">River-view heights</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Vrundavan Chawkdi</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Waghodia Road-390010</a>
+                                </li>
+                                <li>
+                                    <a href="#!" class="text-white">Vadodara Gujarat</a>
+                                </li>
+                            </ul>
+                        </div>
 						<!--Grid column-->
 
 						<!--Grid column-->
 
 						<!--Grid column-->
 					</div>
+					<style>
+                        .text-white{
+                            font-size: 12px;
+                        }
+                    </style>
 					<!--Grid row-->
 				</section>
 				<!-- Section: Links -->
